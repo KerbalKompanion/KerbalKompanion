@@ -21,13 +21,14 @@ struct MainViewDetail: View {
     func containedView() -> AnyView {
         switch selectedView {
             case .panels:        return AnyView(PanelView().environmentObject(self.telemachus).environmentObject(self.settings))
+            case .controll:      return AnyView(ControllView().environmentObject(self.telemachus).environmentObject(self.settings))
             case .flightDisplay: return AnyView(FlightDisplayView().environmentObject(self.telemachus).environmentObject(self.settings))
-            case .graphs:        return AnyView(GraphView().environmentObject(self.telemachus).environmentObject(self.settings))
+            case .map:        return AnyView(MapView().environmentObject(self.telemachus).environmentObject(self.settings))
             case .grid:          return AnyView(GridView().environmentObject(self.telemachus).environmentObject(self.settings))
-            default: return AnyView(Text("hi"))
         }
     }
     
+    //MARK: PanelView
     struct PanelView: View {
         @EnvironmentObject var settings: SettingsStore
         @EnvironmentObject var telemachus: TelemachusClient
@@ -55,6 +56,24 @@ struct MainViewDetail: View {
         }
     }
     
+    //MARK: ControllView
+    struct ControllView: View {
+        @EnvironmentObject var settings: SettingsStore
+        @EnvironmentObject var telemachus: TelemachusClient
+        
+        var body: some View {
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack() {
+                    ActionGroupControll().environmentObject(self.telemachus)
+                    Spacer().frame(height: 20)
+                    ToggleControll().environmentObject(self.telemachus)
+                }
+                .padding()
+            }
+        }
+    }
+    
+    //MARK: FlightDisplayView
     struct FlightDisplayView: View {
         @EnvironmentObject var settings: SettingsStore
         @EnvironmentObject var telemachus: TelemachusClient
@@ -70,42 +89,69 @@ struct MainViewDetail: View {
         }
         
         var body: some View {
-            RoundedBackground()
+            AttitudeIndicator(
+                data: self.$telemachus.data,
+                frame: CGSize(width: 500, height: 500),
+                style: .fullScreen
+            ).clipShape(RoundedRectangle(cornerRadius: 10)).background(RoundedBackground())
+                .padding(.trailing)
         }
     }
     
-    struct GraphView: View {
+    //MARK: MapView
+    struct MapView: View {
         @EnvironmentObject var settings: SettingsStore
         @EnvironmentObject var telemachus: TelemachusClient
-                        
         var body: some View {
             RoundedBackground()
         }
     }
     
+    //MARK: GridView
     struct GridView: View {
         @EnvironmentObject var settings: SettingsStore
         @EnvironmentObject var telemachus: TelemachusClient
                 
+        @State var isShowingMenu: Bool = false
         func size(_ geo: GeometryProxy) -> CGSize {
             let width = (geo.size.width / 2) - 44
             let height = (geo.size.height / 2) - 44
-            return CGSize(width: width, height: height)
+            if isShowingMenu {
+                return CGSize(width: width - 220, height: height - 220)
+            } else {
+                return CGSize(width: width, height: height)
+            }
+            
         }
         
         var body: some View {
             GeometryReader() { geo in
                 VStack(spacing: 30) {
                     HStack(spacing: 30) {
-                        RoundedBackground().frame(width: self.size(geo).width, height: self.size(geo).height)
-                        RoundedBackground().frame(width: self.size(geo).width, height: self.size(geo).height)
+                        GridItem()
+                            .environmentObject(self.telemachus)
+                            .frame(width: self.size(geo).width, height: self.size(geo).height)
+                        GridItem()
+                            .environmentObject(self.telemachus)
+                            .frame(width: self.size(geo).width, height: self.size(geo).height)
                     }
                     HStack(spacing: 30) {
-                        RoundedBackground().frame(width: self.size(geo).width, height: self.size(geo).height)
-                        RoundedBackground().frame(width: self.size(geo).width, height: self.size(geo).height)
+                        GridItem()
+                            .environmentObject(self.telemachus)
+                            .frame(width: self.size(geo).width, height: self.size(geo).height)
+                        GridItem()
+                            .environmentObject(self.telemachus)
+                            .frame(width: self.size(geo).width, height: self.size(geo).height)
                     }
+//                    if self.isShowingMenu {
+//                        
+//                    }
                 }.padding(12)
             }
+        }
+        
+        enum GridOption {
+            case map
         }
     }
     

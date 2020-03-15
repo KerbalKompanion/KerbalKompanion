@@ -38,7 +38,7 @@ struct MainView: View {
     
      var body: some View {
         VStack {
-            TopPanel(showSettings: self.$showSettings).environmentObject(self.telemachus).environmentObject(self.settings)
+            TopPanel(showSettings: self.$showSettings, error: self.$error).environmentObject(self.telemachus).environmentObject(self.settings)
             Group() {
                 if !(self.showSettings) {
                     GeometryReader() { geo in
@@ -67,8 +67,9 @@ struct MainView: View {
     
     enum MainView {
         case panels
+        case controll
         case flightDisplay
-        case graphs
+        case map
         case grid
     }
 }

@@ -67,7 +67,8 @@ struct OtherPanel: View {
                                     DataRow(label: "REL. VELOCITY", value: String(format: "%.1f", target!.relativeVelocity))
                                 }
                                 HStack {
-                                    Image(systemName: self.showTargetDetail ? "chevron.compact.down" : "chevron.compact.up")
+                                    Image(systemName: "chevron.compact.down")
+                                        .rotationEffect(.degrees(self.showTargetDetail ? 180 : 0))
                                     Text("DETAIL")
                                 }.onTapGesture {
                                     self.showTargetDetail.toggle()

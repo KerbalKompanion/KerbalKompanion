@@ -35,9 +35,9 @@ struct InstrumentsPanel: View {
                 }.accentColor(.primary)
                 if self.showPanelOptions {
                     Divider()
-//                    VStack(alignment: .leading) {
-//                        PanelOptionButton(status: $flightDisplayPane, label: "ATTITUDE INDICATOR")
-//                    }.accentColor(.primary).padding([.leading, .trailing, .bottom])
+                    VStack(alignment: .leading) {
+                        PanelOptionButton(status: $flightDisplayPane, label: "ATTITUDE INDICATOR")
+                    }.accentColor(.primary).padding([.leading, .trailing, .bottom])
                 }
             }.frame(width: 250).background(RoundedBackground(isInner: self.showPanelOptions)).padding([.leading, .trailing, .bottom], 22).padding(.top, 12)
             
@@ -45,13 +45,11 @@ struct InstrumentsPanel: View {
                 VStack(alignment: .leading) {
                     //MARK: ENGINE INDICATOR LIGHTS
                     if flightDisplayPane {
-//                        AttitudeIndicator(
-//                            data: self.$telemachus.data,
-//                            frame: CGSize(width: 250, height: 250),
-//                            style: .small
-//                        )
-                        Rectangle()
-                            .clipShape(RoundedRectangle(cornerRadius: 10)).frame(width: 250, height: 250).background(RoundedBackground())
+                        AttitudeIndicator(
+                            data: self.$telemachus.data,
+                            frame: CGSize(width: 250, height: 250),
+                            style: .small
+                        ).clipShape(RoundedRectangle(cornerRadius: 10)).frame(width: 250, height: 250).background(RoundedBackground())
                     }
                 }
             }.padding(.horizontal, 22)

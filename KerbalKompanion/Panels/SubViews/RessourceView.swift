@@ -19,12 +19,12 @@ class RessourceView {
                 Text(label).font(.system(.subheadline, design: .monospaced)).bold()
                 Spacer()
                 // TODO: Fix this
-                Text( String(format: "%02d%", Int(self.fuel.max != 0 ? self.fuel.remaining * 100.0 : 0) ) )
+                Text("% "+String(format: "%02d%", Int(self.fuel.remaining * 100.0) ) )
                     .font(.system(.subheadline, design: .monospaced))
                 Capsule().stroke()
                     .frame(width: 70, height: 15)
                     .overlay(
-                        Capsule().frame(width: CGFloat(self.fuel.max != 0 ?  7.0*self.fuel.remaining : 0))
+                        Capsule().frame(width: CGFloat(70 * self.fuel.remaining))
                         ,alignment: .leading)
             }
         }

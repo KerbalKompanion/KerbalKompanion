@@ -19,15 +19,21 @@ struct MainMenu: View {
             )
             
             MenuItem(
+                icon: "gamecontroller.fill",
+                selectedView: self.$selectedView,
+                view: .controll
+            )
+            
+            MenuItem(
                 icon: "tv.fill",
                 selectedView: self.$selectedView,
                 view: .flightDisplay
             )
             
             MenuItem(
-                icon: "chart.bar.fill",
+                icon: "map.fill",
                 selectedView: self.$selectedView,
-                view: .graphs
+                view: .map
             )
             
             MenuItem(

@@ -12,28 +12,42 @@ struct TopPanel: View {
     @EnvironmentObject var settings: SettingsStore
     @EnvironmentObject var telemachus: TelemachusClient
     @Binding var showSettings: Bool
+    @Binding var error: AlertError?
     var data: TelemachusData {
         return self.telemachus.data
     }
     @State var showHeightFromTerrain: Bool = true
     
+    var gameStatus: (label: String, icon: String, color: Color) {
+        switch self.data.gameStatus {
+        case .inFlight:  return (label: " CONNECTED  ", icon: "dot.radiowaves.left.and.right", color: .primary)
+        case .paused:    return (label: " NO ANTENNA ", icon: "pause.fill", color: .yellow)
+        case .noPower:   return (label: "  NO POWER  ", icon: "bolt.slash.fill", color: .red)
+        case .disabled:  return (label: "  DISABLED  ", icon: "wifi.slash", color: .yellow)
+        case .notFound:  return (label: " NOT FOUND  ", icon: "questionmark", color: .yellow)
+        case .error:     return (label: "   ERROR    ", icon: "exclamationmark.triangle.fill", color: .red)
+        }
+    }
     var body: some View {
 //        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(alignment: .top, spacing: 25) {
+            HStack(alignment: .center, spacing: 25) {
                 //MARK: CONNECTION STATUS
                 Button(action: {
-                    self.telemachus.connect(self.settings.ip, self.settings.port) {
-                        self.telemachus.subscribeTo(TelemachusClient.ApiKey.allCases)
+                    self.telemachus.connect(self.settings.ip, self.settings.port) { result in
+                        switch result {
+                            case .success: self.telemachus.subscribeTo(TelemachusClient.ApiKey.allCases)
+                            case .failure: break //self.error = AlertError(title: "ERROR", reason: "Could not connect to Server")
+                        }
                     }
                 }) {
                     VStack {
                         Text(" ").overlay(
-                            Image(systemName: "dot.radiowaves.left.and.right")
+                            Image(systemName: self.gameStatus.icon)
                         )
                         .font(.largeTitle)
-                        .accentColor(self.telemachus.isConnected ? .primary : .red)
+                            .accentColor(self.telemachus.isConnected ? self.gameStatus.color : .red)
                             
-                        Text(self.telemachus.isConnected ? "CONNECTED" : "DISCONNECTED")
+                        Text(self.telemachus.isConnected ? self.gameStatus.label : "DISCONNECTED")
                             .font(.system(.caption, design: .monospaced)).foregroundColor(.primary)
                     }.lineLimit(1).padding(.vertical, 10).padding(.horizontal).background(RoundedBackground())
                 }.buttonStyle(NMButton())
@@ -51,12 +65,11 @@ struct TopPanel: View {
                     }.lineLimit(1).padding(.vertical, 10).padding(.horizontal).background(RoundedBackground())
                 }.buttonStyle(NMButton())
                 
-                //MARK: HEADING INDICATOR
+                //MARK: VERTICAL SPEEDOMETER
                 VStack {
-                    Text(String(format: "%03d", Int(data.vessel.attitude.heading)))
+                    Text((Int(data.vessel.speed.vertical) < 0 ? "-" : "+") + String(format: "%04d", abs(Int(data.vessel.speed.vertical))))
                         .font(.system(.largeTitle, design: .monospaced))
-                        .accentColor(.primary)
-                    Text("HDG °").font(.system(.caption, design: .monospaced))
+                    Text("VERT SPD (m/s)").font(.system(.caption, design: .monospaced))
                 }.lineLimit(1).padding(.vertical, 10).padding(.horizontal).background(RoundedBackground())
                 
                 //MARK: VELOCITY INDICATOR
@@ -67,6 +80,14 @@ struct TopPanel: View {
                     Text("SURF SPD (m/s)").font(.system(.caption, design: .monospaced))
                 }.lineLimit(1).padding(.vertical, 10).padding(.horizontal).background(RoundedBackground())
                 
+                //MARK: HEADING INDICATOR
+                VStack {
+                    Text(String(format: "%03d", Int(data.vessel.attitude.heading)))
+                        .font(.system(.largeTitle, design: .monospaced))
+                        .accentColor(.primary)
+                    Text("HDG °").font(.system(.caption, design: .monospaced))
+                }.lineLimit(1).padding(.vertical, 10).padding(.horizontal).background(RoundedBackground())
+                                
                 //MARK: PITCH INDICATOR
                 VStack {
                     Text(String(format: "%03d", Int(data.vessel.attitude.pitch)))
@@ -75,13 +96,7 @@ struct TopPanel: View {
                     Text("PITCH (°)").font(.system(.caption, design: .monospaced))
                 }.lineLimit(1).padding(.vertical, 10).padding(.horizontal).background(RoundedBackground())
                 
-                //MARK: VERTICAL SPEEDOMETER
-                VStack {
-                    Text(String(format: "%04d", abs(Int(data.vessel.speed.vertical))))
-                        .font(.system(.largeTitle, design: .monospaced))
-                        .accentColor(data.vessel.speed.vertical < 0 ? .red : .primary)
-                    Text("VERT SPD (m/s)").font(.system(.caption, design: .monospaced))
-                }.lineLimit(1).padding(.vertical, 10).padding(.horizontal).background(RoundedBackground())
+                
                 Spacer()
                 
                 //MARK: PREFERENCES
@@ -106,7 +121,7 @@ struct TopPanel: View {
 
 struct TopPanel_Previews: PreviewProvider {
     static var previews: some View {
-        TopPanel(showSettings: .constant(false))
+        TopPanel(showSettings: .constant(false), error: .constant(nil))
     }
 }
 
