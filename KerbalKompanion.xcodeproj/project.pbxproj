@@ -7,28 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBD5B83150D0ACF273B55C5F /* Pods_KerbalKompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A549D8B00C0D0B9E56D2EA77 /* Pods_KerbalKompanion.framework */; };
+		FD51BFF6241D36AE00E1C3B4 /* TelemachusKit in Frameworks */ = {isa = PBXBuildFile; productRef = FD51BFF5241D36AE00E1C3B4 /* TelemachusKit */; };
+		FD51BFF8241D37D800E1C3B4 /* RessourcePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFF7241D37D800E1C3B4 /* RessourcePanel.swift */; };
+		FD51BFFA241D381A00E1C3B4 /* RessourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFF9241D381A00E1C3B4 /* RessourceView.swift */; };
+		FD51BFFC241D3F3800E1C3B4 /* OtherPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFFB241D3F3800E1C3B4 /* OtherPanel.swift */; };
+		FD51BFFE241D3F6800E1C3B4 /* DataRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFFD241D3F6800E1C3B4 /* DataRow.swift */; };
+		FD51C000241D479A00E1C3B4 /* InstrumentsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFFF241D479A00E1C3B4 /* InstrumentsPanel.swift */; };
+		FD51C002241D4B5B00E1C3B4 /* AttitudeIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51C001241D4B5B00E1C3B4 /* AttitudeIndicator.swift */; };
+		FD653CD1241D1D9F00269DE9 /* TopPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD653CD0241D1D9F00269DE9 /* TopPanel.swift */; };
+		FD653CD3241D201D00269DE9 /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD653CD2241D201D00269DE9 /* ColorScheme.swift */; };
+		FD653CD6241D26FB00269DE9 /* StatusIndicatorPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD653CD5241D26FB00269DE9 /* StatusIndicatorPanel.swift */; };
+		FD653CD9241D273600269DE9 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD653CD8241D273600269DE9 /* IndicatorView.swift */; };
+		FD653CDB241D276E00269DE9 /* PanelOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD653CDA241D276E00269DE9 /* PanelOptionButton.swift */; };
+		FD6754FD241DB56E0071F4A1 /* SettingsDetailViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6754FC241DB56E0071F4A1 /* SettingsDetailViews.swift */; };
+		FD6754FF241DC2CC0071F4A1 /* RoundedBackgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6754FE241DC2CC0071F4A1 /* RoundedBackgrounds.swift */; };
+		FD675501241DC4150071F4A1 /* NMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD675500241DC4150071F4A1 /* NMButton.swift */; };
+		FD675504241DCF060071F4A1 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD675503241DCF060071F4A1 /* MainMenu.swift */; };
+		FD675506241DCFB00071F4A1 /* MainViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD675505241DCFB00071F4A1 /* MainViewDetail.swift */; };
 		FD9580B5241BE89C001E0252 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9580B4241BE89C001E0252 /* SettingsStore.swift */; };
-		FD9580B7241BE918001E0252 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9580B6241BE918001E0252 /* DataView.swift */; };
+		FD9580B7241BE918001E0252 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9580B6241BE918001E0252 /* MainView.swift */; };
 		FD9580B9241BE9E1001E0252 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9580B8241BE9E1001E0252 /* SettingsView.swift */; };
-		FD9580BB241C08D3001E0252 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9580BA241C08D3001E0252 /* OnboardingView.swift */; };
 		FDF214BE241AE56100606C8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF214BD241AE56100606C8B /* AppDelegate.swift */; };
 		FDF214C0241AE56100606C8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF214BF241AE56100606C8B /* SceneDelegate.swift */; };
-		FDF214C2241AE56100606C8B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF214C1241AE56100606C8B /* ContentView.swift */; };
 		FDF214C4241AE56500606C8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF214C3241AE56500606C8B /* Assets.xcassets */; };
 		FDF214C7241AE56500606C8B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDF214C6241AE56500606C8B /* Preview Assets.xcassets */; };
 		FDF214CA241AE56500606C8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF214C8241AE56500606C8B /* LaunchScreen.storyboard */; };
-		FDF214D3241AE80D00606C8B /* TelemachusKit in Frameworks */ = {isa = PBXBuildFile; productRef = FDF214D2241AE80D00606C8B /* TelemachusKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A549D8B00C0D0B9E56D2EA77 /* Pods_KerbalKompanion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KerbalKompanion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A54B7D7ED48F295F730B6C41 /* Pods-KerbalKompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerbalKompanion.release.xcconfig"; path = "Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion.release.xcconfig"; sourceTree = "<group>"; };
+		A5557965CC1874073C5EF265 /* Pods-KerbalKompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerbalKompanion.debug.xcconfig"; path = "Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion.debug.xcconfig"; sourceTree = "<group>"; };
+		FD51BFF7241D37D800E1C3B4 /* RessourcePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessourcePanel.swift; sourceTree = "<group>"; };
+		FD51BFF9241D381A00E1C3B4 /* RessourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessourceView.swift; sourceTree = "<group>"; };
+		FD51BFFB241D3F3800E1C3B4 /* OtherPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPanel.swift; sourceTree = "<group>"; };
+		FD51BFFD241D3F6800E1C3B4 /* DataRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRow.swift; sourceTree = "<group>"; };
+		FD51BFFF241D479A00E1C3B4 /* InstrumentsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentsPanel.swift; sourceTree = "<group>"; };
+		FD51C001241D4B5B00E1C3B4 /* AttitudeIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttitudeIndicator.swift; sourceTree = "<group>"; };
+		FD653CD0241D1D9F00269DE9 /* TopPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPanel.swift; sourceTree = "<group>"; };
+		FD653CD2241D201D00269DE9 /* ColorScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		FD653CD5241D26FB00269DE9 /* StatusIndicatorPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIndicatorPanel.swift; sourceTree = "<group>"; };
+		FD653CD8241D273600269DE9 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		FD653CDA241D276E00269DE9 /* PanelOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelOptionButton.swift; sourceTree = "<group>"; };
+		FD6754FC241DB56E0071F4A1 /* SettingsDetailViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailViews.swift; sourceTree = "<group>"; };
+		FD6754FE241DC2CC0071F4A1 /* RoundedBackgrounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBackgrounds.swift; sourceTree = "<group>"; };
+		FD675500241DC4150071F4A1 /* NMButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMButton.swift; sourceTree = "<group>"; };
+		FD675503241DCF060071F4A1 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		FD675505241DCFB00071F4A1 /* MainViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewDetail.swift; sourceTree = "<group>"; };
 		FD9580B4241BE89C001E0252 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
-		FD9580B6241BE918001E0252 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		FD9580B6241BE918001E0252 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FD9580B8241BE9E1001E0252 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		FD9580BA241C08D3001E0252 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FDF214BA241AE56100606C8B /* KerbalKompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KerbalKompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF214BD241AE56100606C8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF214BF241AE56100606C8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FDF214C1241AE56100606C8B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDF214C3241AE56500606C8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDF214C6241AE56500606C8B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FDF214C9241AE56500606C8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,18 +72,84 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDF214D3241AE80D00606C8B /* TelemachusKit in Frameworks */,
+				FD51BFF6241D36AE00E1C3B4 /* TelemachusKit in Frameworks */,
+				EBD5B83150D0ACF273B55C5F /* Pods_KerbalKompanion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90AB2532C36DD4CB96ED2DF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A549D8B00C0D0B9E56D2EA77 /* Pods_KerbalKompanion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A963FA00B63FCB83564CF52F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5557965CC1874073C5EF265 /* Pods-KerbalKompanion.debug.xcconfig */,
+				A54B7D7ED48F295F730B6C41 /* Pods-KerbalKompanion.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD653CD4241D26CF00269DE9 /* Panels */ = {
+			isa = PBXGroup;
+			children = (
+				FD653CD0241D1D9F00269DE9 /* TopPanel.swift */,
+				FD653CD7241D272C00269DE9 /* SubViews */,
+				FD653CD5241D26FB00269DE9 /* StatusIndicatorPanel.swift */,
+				FD51BFF7241D37D800E1C3B4 /* RessourcePanel.swift */,
+				FD51BFFB241D3F3800E1C3B4 /* OtherPanel.swift */,
+				FD51BFFF241D479A00E1C3B4 /* InstrumentsPanel.swift */,
+			);
+			path = Panels;
+			sourceTree = "<group>";
+		};
+		FD653CD7241D272C00269DE9 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				FD653CD8241D273600269DE9 /* IndicatorView.swift */,
+				FD653CDA241D276E00269DE9 /* PanelOptionButton.swift */,
+				FD51BFF9241D381A00E1C3B4 /* RessourceView.swift */,
+				FD51BFFD241D3F6800E1C3B4 /* DataRow.swift */,
+				FD51C001241D4B5B00E1C3B4 /* AttitudeIndicator.swift */,
+				FD6754FE241DC2CC0071F4A1 /* RoundedBackgrounds.swift */,
+				FD675500241DC4150071F4A1 /* NMButton.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		FD675502241DC9440071F4A1 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FD9580B8241BE9E1001E0252 /* SettingsView.swift */,
+				FD6754FC241DB56E0071F4A1 /* SettingsDetailViews.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FD675507241DD05D0071F4A1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FD9580B6241BE918001E0252 /* MainView.swift */,
+				FD675503241DCF060071F4A1 /* MainMenu.swift */,
+				FD675505241DCFB00071F4A1 /* MainViewDetail.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		FDF214B1241AE56100606C8B = {
 			isa = PBXGroup;
 			children = (
 				FDF214BC241AE56100606C8B /* KerbalKompanion */,
 				FDF214BB241AE56100606C8B /* Products */,
+				A963FA00B63FCB83564CF52F /* Pods */,
+				90AB2532C36DD4CB96ED2DF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,10 +166,10 @@
 			children = (
 				FDF214BD241AE56100606C8B /* AppDelegate.swift */,
 				FDF214BF241AE56100606C8B /* SceneDelegate.swift */,
-				FDF214C1241AE56100606C8B /* ContentView.swift */,
-				FD9580BA241C08D3001E0252 /* OnboardingView.swift */,
-				FD9580B6241BE918001E0252 /* DataView.swift */,
-				FD9580B8241BE9E1001E0252 /* SettingsView.swift */,
+				FD675507241DD05D0071F4A1 /* Main */,
+				FD675502241DC9440071F4A1 /* Settings */,
+				FD653CD4241D26CF00269DE9 /* Panels */,
+				FD653CD2241D201D00269DE9 /* ColorScheme.swift */,
 				FD9580B4241BE89C001E0252 /* SettingsStore.swift */,
 				FDF214C3241AE56500606C8B /* Assets.xcassets */,
 				FDF214C8241AE56500606C8B /* LaunchScreen.storyboard */,
@@ -96,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDF214CE241AE56500606C8B /* Build configuration list for PBXNativeTarget "KerbalKompanion" */;
 			buildPhases = (
+				6F1C0DF1707BCE800C096A85 /* [CP] Check Pods Manifest.lock */,
 				FDF214B6241AE56100606C8B /* Sources */,
 				FDF214B7241AE56100606C8B /* Frameworks */,
 				FDF214B8241AE56100606C8B /* Resources */,
+				EE473D52718CE34F3D108C8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,7 +206,7 @@
 			);
 			name = KerbalKompanion;
 			packageProductDependencies = (
-				FDF214D2241AE80D00606C8B /* TelemachusKit */,
+				FD51BFF5241D36AE00E1C3B4 /* TelemachusKit */,
 			);
 			productName = KerbalKompanion;
 			productReference = FDF214BA241AE56100606C8B /* KerbalKompanion.app */;
@@ -137,7 +237,7 @@
 			);
 			mainGroup = FDF214B1241AE56100606C8B;
 			packageReferences = (
-				FDF214D1241AE80D00606C8B /* XCRemoteSwiftPackageReference "TelemachusKit" */,
+				FD51BFF4241D36AE00E1C3B4 /* XCRemoteSwiftPackageReference "TelemachusKit" */,
 			);
 			productRefGroup = FDF214BB241AE56100606C8B /* Products */;
 			projectDirPath = "";
@@ -161,18 +261,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F1C0DF1707BCE800C096A85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KerbalKompanion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE473D52718CE34F3D108C8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FDF214B6241AE56100606C8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FD9580B5241BE89C001E0252 /* SettingsStore.swift in Sources */,
+				FD653CD3241D201D00269DE9 /* ColorScheme.swift in Sources */,
 				FDF214BE241AE56100606C8B /* AppDelegate.swift in Sources */,
-				FD9580B7241BE918001E0252 /* DataView.swift in Sources */,
+				FD9580B7241BE918001E0252 /* MainView.swift in Sources */,
+				FD51BFF8241D37D800E1C3B4 /* RessourcePanel.swift in Sources */,
+				FD51C000241D479A00E1C3B4 /* InstrumentsPanel.swift in Sources */,
+				FD653CD9241D273600269DE9 /* IndicatorView.swift in Sources */,
+				FD675506241DCFB00071F4A1 /* MainViewDetail.swift in Sources */,
+				FD675501241DC4150071F4A1 /* NMButton.swift in Sources */,
+				FD6754FF241DC2CC0071F4A1 /* RoundedBackgrounds.swift in Sources */,
 				FD9580B9241BE9E1001E0252 /* SettingsView.swift in Sources */,
+				FD653CD1241D1D9F00269DE9 /* TopPanel.swift in Sources */,
+				FD51C002241D4B5B00E1C3B4 /* AttitudeIndicator.swift in Sources */,
+				FD51BFFC241D3F3800E1C3B4 /* OtherPanel.swift in Sources */,
+				FD653CD6241D26FB00269DE9 /* StatusIndicatorPanel.swift in Sources */,
 				FDF214C0241AE56100606C8B /* SceneDelegate.swift in Sources */,
-				FDF214C2241AE56100606C8B /* ContentView.swift in Sources */,
-				FD9580BB241C08D3001E0252 /* OnboardingView.swift in Sources */,
+				FD675504241DCF060071F4A1 /* MainMenu.swift in Sources */,
+				FD6754FD241DB56E0071F4A1 /* SettingsDetailViews.swift in Sources */,
+				FD51BFFE241D3F6800E1C3B4 /* DataRow.swift in Sources */,
+				FD51BFFA241D381A00E1C3B4 /* RessourceView.swift in Sources */,
+				FD653CDB241D276E00269DE9 /* PanelOptionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,12 +462,17 @@
 		};
 		FDF214CF241AE56500606C8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5557965CC1874073C5EF265 /* Pods-KerbalKompanion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"KerbalKompanion/Preview Content\"";
 				DEVELOPMENT_TEAM = ME2UKFKL5H;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KerbalKompanion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,18 +481,23 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.noahkamara.KerbalKompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
 		FDF214D0241AE56500606C8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A54B7D7ED48F295F730B6C41 /* Pods-KerbalKompanion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"KerbalKompanion/Preview Content\"";
 				DEVELOPMENT_TEAM = ME2UKFKL5H;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = KerbalKompanion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,7 +506,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.noahkamara.KerbalKompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -368,20 +534,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FDF214D1241AE80D00606C8B /* XCRemoteSwiftPackageReference "TelemachusKit" */ = {
+		FD51BFF4241D36AE00E1C3B4 /* XCRemoteSwiftPackageReference "TelemachusKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/noahkamara/TelemachusKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = "0.0.1-alpha";
+				minimumVersion = "1.0.0-alpha.2";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FDF214D2241AE80D00606C8B /* TelemachusKit */ = {
+		FD51BFF5241D36AE00E1C3B4 /* TelemachusKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FDF214D1241AE80D00606C8B /* XCRemoteSwiftPackageReference "TelemachusKit" */;
+			package = FD51BFF4241D36AE00E1C3B4 /* XCRemoteSwiftPackageReference "TelemachusKit" */;
 			productName = TelemachusKit;
 		};
 /* End XCSwiftPackageProductDependency section */
