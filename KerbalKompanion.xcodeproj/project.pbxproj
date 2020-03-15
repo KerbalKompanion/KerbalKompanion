@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EBD5B83150D0ACF273B55C5F /* Pods_KerbalKompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A549D8B00C0D0B9E56D2EA77 /* Pods_KerbalKompanion.framework */; };
-		FD51BFF6241D36AE00E1C3B4 /* TelemachusKit in Frameworks */ = {isa = PBXBuildFile; productRef = FD51BFF5241D36AE00E1C3B4 /* TelemachusKit */; };
+		BACCDF4E1DF0100AACDEF2AA /* Pods_KerbalKompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F80DE19515769FDD503BCC3 /* Pods_KerbalKompanion.framework */; };
+		FD51BFF6241D36AE00E1C3B4 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = FD51BFF5241D36AE00E1C3B4 /* SwiftPackageProductDependency */; };
 		FD51BFF8241D37D800E1C3B4 /* RessourcePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFF7241D37D800E1C3B4 /* RessourcePanel.swift */; };
 		FD51BFFA241D381A00E1C3B4 /* RessourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFF9241D381A00E1C3B4 /* RessourceView.swift */; };
 		FD51BFFC241D3F3800E1C3B4 /* OtherPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFFB241D3F3800E1C3B4 /* OtherPanel.swift */; };
@@ -36,9 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A549D8B00C0D0B9E56D2EA77 /* Pods_KerbalKompanion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KerbalKompanion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A54B7D7ED48F295F730B6C41 /* Pods-KerbalKompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerbalKompanion.release.xcconfig"; path = "Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion.release.xcconfig"; sourceTree = "<group>"; };
-		A5557965CC1874073C5EF265 /* Pods-KerbalKompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerbalKompanion.debug.xcconfig"; path = "Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion.debug.xcconfig"; sourceTree = "<group>"; };
+		27968A45AC3853FA98D1F3B5 /* Pods-KerbalKompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerbalKompanion.debug.xcconfig"; path = "Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion.debug.xcconfig"; sourceTree = "<group>"; };
+		2F80DE19515769FDD503BCC3 /* Pods_KerbalKompanion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KerbalKompanion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57C5B807525F6FC97D2FE1B4 /* Pods-KerbalKompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerbalKompanion.release.xcconfig"; path = "Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion.release.xcconfig"; sourceTree = "<group>"; };
 		FD51BFF7241D37D800E1C3B4 /* RessourcePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessourcePanel.swift; sourceTree = "<group>"; };
 		FD51BFF9241D381A00E1C3B4 /* RessourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessourceView.swift; sourceTree = "<group>"; };
 		FD51BFFB241D3F3800E1C3B4 /* OtherPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPanel.swift; sourceTree = "<group>"; };
@@ -72,18 +72,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD51BFF6241D36AE00E1C3B4 /* TelemachusKit in Frameworks */,
-				EBD5B83150D0ACF273B55C5F /* Pods_KerbalKompanion.framework in Frameworks */,
+				FD51BFF6241D36AE00E1C3B4 /* BuildFile in Frameworks */,
+				BACCDF4E1DF0100AACDEF2AA /* Pods_KerbalKompanion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		90AB2532C36DD4CB96ED2DF7 /* Frameworks */ = {
+		31774D100B0A2C482991B90B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A549D8B00C0D0B9E56D2EA77 /* Pods_KerbalKompanion.framework */,
+				2F80DE19515769FDD503BCC3 /* Pods_KerbalKompanion.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -91,8 +91,8 @@
 		A963FA00B63FCB83564CF52F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A5557965CC1874073C5EF265 /* Pods-KerbalKompanion.debug.xcconfig */,
-				A54B7D7ED48F295F730B6C41 /* Pods-KerbalKompanion.release.xcconfig */,
+				27968A45AC3853FA98D1F3B5 /* Pods-KerbalKompanion.debug.xcconfig */,
+				57C5B807525F6FC97D2FE1B4 /* Pods-KerbalKompanion.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 				FDF214BC241AE56100606C8B /* KerbalKompanion */,
 				FDF214BB241AE56100606C8B /* Products */,
 				A963FA00B63FCB83564CF52F /* Pods */,
-				90AB2532C36DD4CB96ED2DF7 /* Frameworks */,
+				31774D100B0A2C482991B90B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,11 +194,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDF214CE241AE56500606C8B /* Build configuration list for PBXNativeTarget "KerbalKompanion" */;
 			buildPhases = (
-				6F1C0DF1707BCE800C096A85 /* [CP] Check Pods Manifest.lock */,
+				157C2C89FE31788A2F173D68 /* [CP] Check Pods Manifest.lock */,
 				FDF214B6241AE56100606C8B /* Sources */,
 				FDF214B7241AE56100606C8B /* Frameworks */,
 				FDF214B8241AE56100606C8B /* Resources */,
-				EE473D52718CE34F3D108C8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,7 +205,7 @@
 			);
 			name = KerbalKompanion;
 			packageProductDependencies = (
-				FD51BFF5241D36AE00E1C3B4 /* TelemachusKit */,
+				FD51BFF5241D36AE00E1C3B4 /* SwiftPackageProductDependency */,
 			);
 			productName = KerbalKompanion;
 			productReference = FDF214BA241AE56100606C8B /* KerbalKompanion.app */;
@@ -237,7 +236,7 @@
 			);
 			mainGroup = FDF214B1241AE56100606C8B;
 			packageReferences = (
-				FD51BFF4241D36AE00E1C3B4 /* XCRemoteSwiftPackageReference "TelemachusKit" */,
+				FD51BFF4241D36AE00E1C3B4 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = FDF214BB241AE56100606C8B /* Products */;
 			projectDirPath = "";
@@ -262,7 +261,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6F1C0DF1707BCE800C096A85 /* [CP] Check Pods Manifest.lock */ = {
+		157C2C89FE31788A2F173D68 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -282,23 +281,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE473D52718CE34F3D108C8D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -462,7 +444,7 @@
 		};
 		FDF214CF241AE56500606C8B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5557965CC1874073C5EF265 /* Pods-KerbalKompanion.debug.xcconfig */;
+			baseConfigurationReference = 27968A45AC3853FA98D1F3B5 /* Pods-KerbalKompanion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -487,7 +469,7 @@
 		};
 		FDF214D0241AE56500606C8B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A54B7D7ED48F295F730B6C41 /* Pods-KerbalKompanion.release.xcconfig */;
+			baseConfigurationReference = 57C5B807525F6FC97D2FE1B4 /* Pods-KerbalKompanion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -534,7 +516,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FD51BFF4241D36AE00E1C3B4 /* XCRemoteSwiftPackageReference "TelemachusKit" */ = {
+		FD51BFF4241D36AE00E1C3B4 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/noahkamara/TelemachusKit.git";
 			requirement = {
@@ -545,9 +527,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FD51BFF5241D36AE00E1C3B4 /* TelemachusKit */ = {
+		FD51BFF5241D36AE00E1C3B4 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FD51BFF4241D36AE00E1C3B4 /* XCRemoteSwiftPackageReference "TelemachusKit" */;
+			package = FD51BFF4241D36AE00E1C3B4 /* RemoteSwiftPackageReference */;
 			productName = TelemachusKit;
 		};
 /* End XCSwiftPackageProductDependency section */
