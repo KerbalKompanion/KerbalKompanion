@@ -1,6 +1,21 @@
-# Welcome to KerbalKompanion 👋
-![License: MIT License](https://img.shields.io/badge/License-MIT License-yellow.svg)
-
+<h1 align="center">Welcome to KerbalKompanion 👋</h1>
+<p>
+  <a href="https://github.com/noahkamara/KerbalKompanion/releases/latest">
+    <img alt="latest stable" src="https://img.shields.io/github/v/release/noahkamara/KerbalKompanion?label=stable">
+  </a>
+  <a href="https://github.com/noahkamara/KerbalKompanion/releases/latest">
+    <img alt="latest version" src="https://img.shields.io/github/v/release/noahkamara/KerbalKompanion?include_prereleases&label=pre">
+  </a>
+  <a href="https://github.com/noahkamara/KerbalKompanion/master/LICENSE">
+    <img src="https://img.shields.io/github/license/noahkamara/KerbalKompanion" />
+  </a>
+  <a href="https://github.com/noahkamara/TelemachusKit/releases/latest">
+    <img src="https://img.shields.io/badge/TelemachusKit-v1.0.0--alpha.4-green" />
+  </a>
+  <a href="https://img.shields.io/badge/Telemachus%20Version-v1.7.0--reborn--gyrfalcon-brightgreen">
+    <img src="https://github.com/TeleIO/Telemachus-1/releases/tag/v1.7.0-reborn-gyrfalcon" />
+  </a>
+</p>
 > KerbalKompanion is an iPad App that works in Tandem with the Telemachus-Mod for Kerbal Space Program.
 
 ### 🏠 [Homepage](https://noahkamara.github.io/KerbalKompanion/)
