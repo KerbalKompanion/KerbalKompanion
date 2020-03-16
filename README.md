@@ -12,7 +12,7 @@
   <a href="https://github.com/noahkamara/TelemachusKit/releases/latest">
     <img src="https://img.shields.io/badge/TelemachusKit-v1.0.0--alpha.4-green" />
   </a>
-  <a href="https://img.shields.io/badge/Telemachus%20Version-v1.7.0--reborn--gyrfalcon-brightgreen">
+  <a href="https://img.shields.io/badge/Telemachus-v1.7.0--reborn--gyrfalcon-brightgreen">
     <img src="https://github.com/TeleIO/Telemachus-1/releases/tag/v1.7.0-reborn-gyrfalcon" />
   </a>
 </p>
