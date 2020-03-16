@@ -1,5 +1,5 @@
 # Welcome to KerbalKompanion 👋
-[![License: MIT License](https://img.shields.io/badge/License-MIT License-yellow.svg)](https://raw.githubusercontent.com/noahkamara/KerbalKompanion/master/LICENSE)
+![License: MIT License](https://img.shields.io/badge/License-MIT License-yellow.svg)
 
 > KerbalKompanion is an iPad App that works in Tandem with the Telemachus-Mod for Kerbal Space Program.
 
