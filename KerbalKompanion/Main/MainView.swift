@@ -92,6 +92,7 @@ extension TelemachusData.GameStatus {
     var string: String {
         switch self {
             case .inFlight: return "IN FLIGHT"
+            case .noVessel: return "NO VESSEL"
             case .paused: return "PAUSED"
             case .noPower: return "NO POWER"
             case .disabled: return "DISABLED"

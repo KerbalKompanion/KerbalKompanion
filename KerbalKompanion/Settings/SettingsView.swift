@@ -27,24 +27,24 @@ struct SettingsView: View {
                         )
                         
                         MenuItem(
-                            label: "ExampleA",
-                            icon: "circle.fill",
+                            label: "Appearance",
+                            icon: "paintbrush",
                             selectedPanel: self.$selectedPanel,
-                            panel: .exampleA
+                            panel: .appearance
                         )
                         
                         MenuItem(
-                            label: "ExampleB",
-                            icon: "square.fill",
+                            label: "Beta Features",
+                            icon: "exclamationmark.triangle.fill",
                             selectedPanel: self.$selectedPanel,
-                            panel: .exampleB
+                            panel: .betaFeatures
                         )
                         
                         MenuItem(
-                            label: "ExampleC",
-                            icon: "hexagon.fill",
+                            label: "About",
+                            icon: "person.fill",
                             selectedPanel: self.$selectedPanel,
-                            panel: .exampleC
+                            panel: .about
                         )
                     }
                 }.frame(width: 300)
@@ -58,9 +58,9 @@ struct SettingsView: View {
     
     enum SettingsPanel {
         case connection
-        case exampleA
-        case exampleB
-        case exampleC
+        case appearance
+        case betaFeatures
+        case about
     }
     
     struct MenuItem: View {

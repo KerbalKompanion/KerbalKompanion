@@ -14,4 +14,8 @@ enum CS {
     static let shadow_light = Color("lightShadow")
 }
 
+extension Color {
+    public static let primary = Color("primary") //Color that we have set in Assets catalog
+    public static let secondary =  Color("secondary")
+}
 

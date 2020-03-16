@@ -54,7 +54,7 @@ struct InstrumentsPanel: View {
                 }
             }.padding(.horizontal, 22)
             Spacer()
-        }.frame(width: 280).padding(.horizontal, 5)
+        }.frame(width: 280).padding(.horizontal, 5).foregroundColor(.primary)
 
     }
 }

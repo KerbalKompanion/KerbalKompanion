@@ -21,7 +21,7 @@
       "appearances" : [
         {
           "appearance" : "luminosity",
-          "value" : "dark"
+          "value" : "light"
         }
       ],
       "color" : {
@@ -31,6 +31,24 @@
           "alpha" : "1.000",
           "blue" : "1.000",
           "green" : "1.000"
+        }
+      }
+    },
+    {
+      "idiom" : "universal",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "color" : {
+        "color-space" : "srgb",
+        "components" : {
+          "red" : "0x1A",
+          "alpha" : "1.000",
+          "blue" : "0x27",
+          "green" : "0x1A"
         }
       }
     }

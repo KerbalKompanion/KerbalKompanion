@@ -17,6 +17,7 @@ class SettingsStore: ObservableObject {
         static let ip = "ip_adress"
         static let port = "port_number"
         static let rate = "refresh_rate"
+        static let darkModePreference = "dark_mode_preference"
     }
     private let defaults: UserDefaults
     let objectWillChange = ObservableObjectPublisher()
@@ -60,6 +61,23 @@ class SettingsStore: ObservableObject {
     var showOnboarding: Bool {
         set { defaults.set(newValue, forKey: Keys.showOnboarding) }
         get { defaults.bool(forKey: Keys.showOnboarding) }
+    }
+    
+    var darkModePreference: DarkModePreference {
+        get {
+            return defaults.string(forKey: Keys.darkModePreference)
+            .flatMap { DarkModePreference(rawValue: $0) } ?? .system
+        }
+
+        set {
+            defaults.set(newValue.rawValue, forKey: Keys.darkModePreference)
+        }
+    }
+    
+    enum DarkModePreference: String, CaseIterable {
+        case dark
+        case light
+        case system
     }
 
 }

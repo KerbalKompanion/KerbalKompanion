@@ -57,20 +57,32 @@ struct RessourcePanel: View {
                     if ressourceOverview {
                         VStack(alignment: .leading) {
                             RessourceView.Graph(label: "LQD", fuel: self.data.vessel.ressource.liquid)
-                            RessourceView.Graph(label: "LQD", fuel: self.data.vessel.ressource.liquid)
-                            RessourceView.Graph(label: "LQD", fuel: self.data.vessel.ressource.liquid)
+                            RessourceView.Graph(label: " EC", fuel: self.data.vessel.ressource.electricCharge)
+                            RessourceView.Graph(label: " IA", fuel: self.data.vessel.ressource.intakeAir)
                         }.padding().background(RoundedBackground())
                     }
 
                     //MARK: LIQUID GAUGE
                     if liquidGauge {
+                        RessourceView.Detail(
+                            label: "LIQUID FUEL",
+                            fuel: self.data.vessel.ressource.liquid
+                        ).environmentObject(self.telemachus)
                     }
 
                     //MARK: EC Gauge
                     if ecGauge {
+                        RessourceView.Detail(
+                            label: "ELECTRIC CHARGE",
+                            fuel: self.data.vessel.ressource.electricCharge
+                        ).environmentObject(self.telemachus)
                     }
+                    
+                    //MARK: INTAKE GAUGE
+//                    if intakeGauge {
+//                    }
                 }
-            }.padding(.horizontal, 22)
+            }.padding(.horizontal, 22).foregroundColor(.primary)
             Spacer()
         }.frame(width: 230)
     }

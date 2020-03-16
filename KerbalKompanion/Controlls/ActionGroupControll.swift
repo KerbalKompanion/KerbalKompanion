@@ -34,7 +34,7 @@ struct ActionGroupControll: View {
                 }
                 Spacer()
             }
-        }
+        }.foregroundColor(.primary)
         .padding()
         .background(RoundedBackground(isInner: true))
     }

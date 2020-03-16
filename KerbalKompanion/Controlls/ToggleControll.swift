@@ -45,7 +45,7 @@ struct ToggleControll: View {
                 }
                 Spacer()
             }
-        }
+        }.foregroundColor(.primary)
         
         .padding()
         .background(RoundedBackground(isInner: true))

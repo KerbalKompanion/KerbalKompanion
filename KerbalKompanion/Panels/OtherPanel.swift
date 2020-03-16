@@ -22,6 +22,7 @@ struct OtherPanel: View {
     @State var showPanelOptions: Bool = false
     
     @State var targetPane: Bool = true
+    @State var sensorPane: Bool = true
     
     @State var showTargetDetail: Bool = false
     var body: some View {
@@ -42,10 +43,10 @@ struct OtherPanel: View {
                 if self.showPanelOptions {
                     Divider()
                     VStack(alignment: .leading) {
-                        PanelOptionButton(status: $targetPane, label: "Target")
+//                        PanelOptionButton(status: $sensorPane, label: "Sensors")
+                        PanelOptionButton(status: $targetPane, label: "Something Else")
                         Divider()
                         PanelOptionButton(status: $targetPane, label: "Target")
-                        Divider()
                     }.accentColor(.primary).padding([.leading, .trailing, .bottom]).frame(width: 180)
                 }
             }.background(RoundedBackground(isInner: self.showPanelOptions)).padding([.leading, .trailing, .bottom], 22).padding(.top, 12)
@@ -53,6 +54,36 @@ struct OtherPanel: View {
             Group() {
                 VStack(alignment: .leading, spacing: 22) {
                     //MARK: ENGINE INDICATOR LIGHTS
+                    
+                    if sensorPane {
+                        VStack(alignment: .leading) {
+                            Text("SENSOR DATA").font(.system(.subheadline, design: .monospaced)).bold()
+                            Divider()
+                            if self.data.sensors.availableSensors.count > 0 {
+                                if self.data.sensors.availableSensors.contains(.temperature) {
+                                    DataRow(label: "TEMPERATURE", value: self.data.sensors.temperature)
+                                    Divider()
+                                }
+                                if self.data.sensors.availableSensors.contains(.pressure) {
+                                    DataRow(label: "PRESSURE", value: self.data.sensors.pressure)
+                                    Divider()
+                                }
+                                if self.data.sensors.availableSensors.contains(.acceleration) {
+                                    DataRow(label: "ACCELERATION", value: self.data.sensors.acceleration)
+                                    Divider()
+                                }
+                                if self.data.sensors.availableSensors.contains(.gravitation) {
+                                    DataRow(label: "GRAVITATION", value: self.data.sensors.gravitation)
+                                    Divider()
+                                }
+                            } else {
+                                DataRow(label: "NO SENSORS ON BOARD", value: "")
+                            }
+                            
+                            
+                        }.padding().background(RoundedBackground())
+                    }
+                    
                     if targetPane {
                         VStack(alignment: .leading) {
                             Text("TARGET INFO").font(.system(.subheadline, design: .monospaced)).bold()
@@ -79,7 +110,7 @@ struct OtherPanel: View {
                         }.padding().background(RoundedBackground())
                     }
                 }
-            }.padding(.horizontal, 22)
+            }.padding(.horizontal, 22).foregroundColor(.primary)
             Spacer()
         }.frame(width: 210)
 

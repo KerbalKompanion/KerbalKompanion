@@ -21,6 +21,7 @@ struct TopPanel: View {
     var gameStatus: (label: String, icon: String, color: Color) {
         switch self.data.gameStatus {
         case .inFlight:  return (label: " CONNECTED  ", icon: "dot.radiowaves.left.and.right", color: .primary)
+        case .noVessel:  return (label: " NO VESSEL  ", icon: "dot.radiowaves.left.and.right", color: .yellow)
         case .paused:    return (label: " NO ANTENNA ", icon: "pause.fill", color: .yellow)
         case .noPower:   return (label: "  NO POWER  ", icon: "bolt.slash.fill", color: .red)
         case .disabled:  return (label: "  DISABLED  ", icon: "wifi.slash", color: .yellow)
@@ -50,27 +51,27 @@ struct TopPanel: View {
                         Text(self.telemachus.isConnected ? self.gameStatus.label : "DISCONNECTED")
                             .font(.system(.caption, design: .monospaced)).foregroundColor(.primary)
                     }.lineLimit(1).padding(.vertical, 10).padding(.horizontal).background(RoundedBackground())
-                }.buttonStyle(NMButton())
+                }.buttonStyle(NMButton()).accentColor(.primary)
                 
                 //MARK: ALTITUDE INDICATOR
                 Button(action: {
                     self.showHeightFromTerrain.toggle()
                 }) {
                     VStack {
-                        Text(String(format: "%06d", Int(self.showHeightFromTerrain ? data.vessel.heightFromTerrain : data.vessel.altitude))+" m" )
+                        Text(String(format: "%05d", Int(self.showHeightFromTerrain ? data.vessel.heightFromTerrain : data.vessel.altitude))+" m" )
                             .font(.system(.largeTitle, design: .monospaced))
                             .accentColor(.primary)
                         Text(self.showHeightFromTerrain ? "HEIGHT FROM TERRAIN" : "ALTITUDE")
                             .font(.system(.caption, design: .monospaced)).foregroundColor(.primary)
                     }.lineLimit(1).padding(.vertical, 10).padding(.horizontal).background(RoundedBackground())
-                }.buttonStyle(NMButton())
+                }.buttonStyle(NMButton()).accentColor(.primary)
                 
                 //MARK: VERTICAL SPEEDOMETER
                 VStack {
                     Text((Int(data.vessel.speed.vertical) < 0 ? "-" : "+") + String(format: "%04d", abs(Int(data.vessel.speed.vertical))))
                         .font(.system(.largeTitle, design: .monospaced))
                     Text("VERT SPD (m/s)").font(.system(.caption, design: .monospaced))
-                }.lineLimit(1).padding(.vertical, 10).padding(.horizontal).background(RoundedBackground())
+                }.lineLimit(1).padding(.vertical,10).padding(.horizontal).background(RoundedBackground())
                 
                 //MARK: VELOCITY INDICATOR
                 VStack {
@@ -114,7 +115,7 @@ struct TopPanel: View {
                             .font(.system(.caption, design: .monospaced)).foregroundColor(.primary)
                     }.lineLimit(1).padding(.vertical, 10).padding(.horizontal)
                 }.buttonStyle(NMButton(isActive: self.showSettings))
-            }.padding(22)
+            }.padding(22).foregroundColor(.primary)
 //        }
     }
 }

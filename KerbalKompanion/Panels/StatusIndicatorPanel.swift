@@ -84,7 +84,7 @@ struct StatusIndicatorPanel: View {
                         }.padding().background(RoundedBackground())
                     }
                 }
-            }.padding(.horizontal, 22)
+            }.padding(.horizontal, 22).foregroundColor(.primary)
             Spacer()
         }.frame(width: 210)
     }
