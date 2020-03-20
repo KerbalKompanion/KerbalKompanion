@@ -30,7 +30,6 @@ struct AttitudeIndicator: UIViewRepresentable {
             config.headingIndicator.size.height = 0
             
             config.horizon.groundColor = SKColor.brown
-            config.horizon.skyColor = SKColor.blue
             config.horizon.zeroPitchLineColor = SKColor.purple
             
             config.pitchLadder.magnitudeDisplayDegree = 0
@@ -38,9 +37,14 @@ struct AttitudeIndicator: UIViewRepresentable {
             config.pitchLadder.strokeColor = SKColor.clear
             config.pitchLadder.majorLineWidth = 0
             config.pitchLadder.minorLineWidth = 0
+            
+            config.attitudeReferenceIndex.sideBarOffset = 30
+            config.bankIndicator.arcRadius = 70
+            config.bankIndicator.arcMaximumDisplayDegree = 60
             return config
         case .fullScreen:
             var config = PrimaryFlightDisplay.DefaultSettings()
+            config.bankIndicator.arcMaximumDisplayDegree = 75
             config.horizon.groundColor = SKColor.brown
             return config
         }
@@ -50,8 +54,8 @@ struct AttitudeIndicator: UIViewRepresentable {
             frame: CGRect(
                 x: 0,
                 y: 0,
-                width: self.frame.width,
-                height: self.frame.height
+                width: self.frame.width * 2,
+                height: self.frame.height * 2
             ),
             settings: self.config)
         flightView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -60,13 +64,15 @@ struct AttitudeIndicator: UIViewRepresentable {
     }
 
     func updateUIView(_ view: PrimaryFlightDisplayView, context: Context) {
-        view.setAttitude(
-            rollRadians: deg2rad(self.data.vessel.attitude.roll),
-            pitchRadians: deg2rad(self.data.vessel.attitude.pitch)
-        )
-        view.setHeadingDegree(self.data.vessel.attitude.heading)
-        view.setAirSpeed(self.data.vessel.speed.surface)
-        view.setAltitude(self.data.vessel.altitude)
+        withAnimation(.easeInOut(duration: 0.1)) {
+            view.setAttitude(
+                rollRadians: deg2rad(self.data.vessel.attitude.roll),
+                pitchRadians: deg2rad(self.data.vessel.attitude.pitch)
+            )
+            view.setHeadingDegree(self.data.vessel.attitude.heading)
+            view.setAirSpeed(self.data.vessel.speed.surface)
+            view.setAltitude(self.data.vessel.altitude)
+        }
     }
     
     enum Style {

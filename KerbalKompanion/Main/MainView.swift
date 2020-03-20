@@ -19,10 +19,9 @@ struct MainView: View {
     
     func initTelemachus() {
         self.telemachus.onConnect = {
-            print("Connected")
+            
         }
         self.telemachus.onDisconnect = { (error: Error?) in
-            print("Disconnected \(error?.localizedDescription ?? "")")
             DispatchQueue.main.async {
                 self.error = AlertError(title: "DISCONNECTED", reason: error?.localizedDescription ?? "")
             }

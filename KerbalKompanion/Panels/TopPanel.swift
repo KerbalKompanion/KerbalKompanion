@@ -36,7 +36,9 @@ struct TopPanel: View {
                 Button(action: {
                     self.telemachus.connect(self.settings.ip, self.settings.port) { result in
                         switch result {
-                            case .success: self.telemachus.subscribeTo(TelemachusClient.ApiKey.allCases)
+                            case .success:
+                                self.telemachus.setRate(self.settings.rate)
+                                self.telemachus.subscribeTo(TelemachusClient.ApiKey.allCases)
                             case .failure: break //self.error = AlertError(title: "ERROR", reason: "Could not connect to Server")
                         }
                     }

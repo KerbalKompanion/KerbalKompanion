@@ -23,13 +23,10 @@ struct RoundedBackground: View {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(CS.main_bg, lineWidth: 4)
                     .shadow(color: CS.shadow_dark, radius: 3, x: 5, y: 5)
-                    .clipShape(
-                        RoundedRectangle(cornerRadius: 10)
-                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                     .shadow(color: CS.shadow_light, radius: 3, x: -5, y: -5)
-                    .clipShape(
-                        RoundedRectangle(cornerRadius: 10)
-                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                
             }
         }
     }

@@ -17,9 +17,10 @@ struct InstrumentsPanel: View {
     }
     
     @State var flightDisplayPane: Bool = true
+    @State var envPane: Bool = true
     @State var showPanelOptions: Bool = false
     var body: some View {
-        VStack {
+        ScrollView(.vertical, showsIndicators: false) {
             VStack {
                 Button( action: {
                     withAnimation(.interactiveSpring()) {
@@ -42,14 +43,27 @@ struct InstrumentsPanel: View {
             }.frame(width: 250).background(RoundedBackground(isInner: self.showPanelOptions)).padding([.leading, .trailing, .bottom], 22).padding(.top, 12)
             
             Group() {
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 22) {
                     //MARK: ENGINE INDICATOR LIGHTS
                     if flightDisplayPane {
-                        AttitudeIndicator(
-                            data: self.$telemachus.data,
-                            frame: CGSize(width: 250, height: 250),
-                            style: .small
-                        ).clipShape(RoundedRectangle(cornerRadius: 10)).frame(width: 250, height: 250).background(RoundedBackground())
+                        VStack {
+                            AttitudeIndicator(
+                                data: self.$telemachus.data,
+                                frame: CGSize(width: 250, height: 250),
+                                style: .small
+                            ).clipShape(Circle()).frame(width: 220, height: 220)
+                            Gauge(label: "G-Force", value: self.data.environment.geeforce, max: 15, error: 0.6)
+                        }.padding().frame(width: 250).background(RoundedBackground())
+                            
+                            
+                    }
+                    
+                    if envPane {
+                        VStack() {
+                            Gauge(label: "G-Force", value: self.data.environment.geeforce, max: 15, error: 0.6)
+                            Gauge(label: "G-Force", value: self.data.environment.geeforce, max: 15, error: 0.6)
+                            Gauge(label: "G-Force", value: self.data.environment.geeforce, max: 15, error: 0.6)
+                        }.padding().background(RoundedBackground())
                     }
                 }
             }.padding(.horizontal, 22)

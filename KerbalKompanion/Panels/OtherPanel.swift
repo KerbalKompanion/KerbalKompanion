@@ -22,7 +22,8 @@ struct OtherPanel: View {
     @State var showPanelOptions: Bool = false
     
     @State var targetPane: Bool = true
-    @State var sensorPane: Bool = true
+    @State var envPane: Bool = true
+    @State var locPane: Bool = true
     
     @State var showTargetDetail: Bool = false
     var body: some View {
@@ -43,8 +44,9 @@ struct OtherPanel: View {
                 if self.showPanelOptions {
                     Divider()
                     VStack(alignment: .leading) {
-//                        PanelOptionButton(status: $sensorPane, label: "Sensors")
-                        PanelOptionButton(status: $targetPane, label: "Something Else")
+                        PanelOptionButton(status: $locPane, label: "Location")
+                        Divider()
+                        PanelOptionButton(status: $envPane, label: "Environment")
                         Divider()
                         PanelOptionButton(status: $targetPane, label: "Target")
                     }.accentColor(.primary).padding([.leading, .trailing, .bottom]).frame(width: 180)
@@ -53,37 +55,42 @@ struct OtherPanel: View {
             
             Group() {
                 VStack(alignment: .leading, spacing: 22) {
-                    //MARK: ENGINE INDICATOR LIGHTS
-                    
-                    if sensorPane {
-                        VStack(alignment: .leading) {
-                            Text("SENSOR DATA").font(.system(.subheadline, design: .monospaced)).bold()
+
+                    //MARK: Location
+                    if locPane {
+                        VStack() {
+                            Text("LOCATION").font(.system(.subheadline, design: .monospaced)).bold()
                             Divider()
-                            if self.data.sensors.availableSensors.count > 0 {
-                                if self.data.sensors.availableSensors.contains(.temperature) {
-                                    DataRow(label: "TEMPERATURE", value: self.data.sensors.temperature)
-                                    Divider()
-                                }
-                                if self.data.sensors.availableSensors.contains(.pressure) {
-                                    DataRow(label: "PRESSURE", value: self.data.sensors.pressure)
-                                    Divider()
-                                }
-                                if self.data.sensors.availableSensors.contains(.acceleration) {
-                                    DataRow(label: "ACCELERATION", value: self.data.sensors.acceleration)
-                                    Divider()
-                                }
-                                if self.data.sensors.availableSensors.contains(.gravitation) {
-                                    DataRow(label: "GRAVITATION", value: self.data.sensors.gravitation)
-                                    Divider()
-                                }
-                            } else {
-                                DataRow(label: "NO SENSORS ON BOARD", value: "")
-                            }
-                            
-                            
+                            DataRow(label: "LAT", value: String(format: "%06.f", self.data.vessel.coordinates.latitude))
+                            DataRow(label: "LONG", value: String(format: "%06.f", self.data.vessel.coordinates.longitude))
+                            DataRow(label: "ALT", value: String(format: "%04d", Int(self.data.vessel.altitude)))
                         }.padding().background(RoundedBackground())
                     }
                     
+                    //MARK: Environment
+                    if envPane {
+                        VStack() {
+                            Text("ENVIRONMENT").font(.system(.subheadline, design: .monospaced)).bold()
+                            Divider()
+                            DataRow(
+                                label: "TERRAIN HEIGHT",
+                                value: String(format: "%04d", Int(self.data.environment.terrainHeight))
+                            )
+                            Divider()
+                            DataRow(
+                                label: "ATMOS DENS.",
+                                value: String(format: "%04.1f", self.data.environment.atmosphericDensity)
+                            )
+                            Divider()
+                            DataRow(
+                                label: "Gee Force",
+                                value: String(format: "%04.2f", self.data.environment.geeforce)
+                            )
+                            Divider()
+                        }.padding().background(RoundedBackground())
+                    }
+                    
+                    //MARK: Target
                     if targetPane {
                         VStack(alignment: .leading) {
                             Text("TARGET INFO").font(.system(.subheadline, design: .monospaced)).bold()

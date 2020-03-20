@@ -21,9 +21,9 @@ class RessourceView {
                 Text("% "+String(format: "%02d%", Int(self.fuel.remaining * 100.0) ) )
                     .font(.system(.subheadline, design: .monospaced))
                 Capsule().stroke()
-                    .frame(width: 70, height: 15)
+                    .frame(width: 70, height: 20)
                     .overlay(
-                        Capsule().frame(width: CGFloat(70 * self.fuel.remaining))
+                        Capsule().frame(width: CGFloat(70 * self.fuel.remaining), height: 20)
                         ,alignment: .leading)
             }
         }

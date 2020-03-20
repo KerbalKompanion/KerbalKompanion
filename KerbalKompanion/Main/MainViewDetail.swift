@@ -23,8 +23,10 @@ struct MainViewDetail: View {
             case .panels:        return AnyView(PanelView().environmentObject(self.telemachus).environmentObject(self.settings))
             case .controll:      return AnyView(ControllView().environmentObject(self.telemachus).environmentObject(self.settings))
             case .flightDisplay: return AnyView(FlightDisplayView().environmentObject(self.telemachus).environmentObject(self.settings))
-            case .map:        return AnyView(MapView().environmentObject(self.telemachus).environmentObject(self.settings))
-            case .grid:          return AnyView(GridView().environmentObject(self.telemachus).environmentObject(self.settings))
+            case .map:           return AnyView(RoundedBackground(isInner: true).overlay(Text("Coming Soon")).padding())
+            //return AnyView(MapView().environmentObject(self.telemachus).environmentObject(self.settings))
+            case .grid:          return AnyView(RoundedBackground(isInner: true).overlay(Text("Coming Soon")).padding())
+            //return AnyView(GridView().environmentObject(self.telemachus).environmentObject(self.settings))
         }
     }
     
@@ -151,6 +153,8 @@ struct MainViewDetail: View {
         }
         
         enum GridOption {
+            case altitudeGraph
+            case environment
             case map
         }
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A6F2C511254515213827602 /* libPods-KerbalKompanion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E941F37EA2F402CF5DBFAF66 /* libPods-KerbalKompanion.a */; };
+		FD3888382424E60C0006EA4B /* Gauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3888372424E60C0006EA4B /* Gauge.swift */; };
 		FD51BFF6241D36AE00E1C3B4 /* TelemachusKit in Frameworks */ = {isa = PBXBuildFile; productRef = FD51BFF5241D36AE00E1C3B4 /* TelemachusKit */; };
 		FD51BFF8241D37D800E1C3B4 /* RessourcePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFF7241D37D800E1C3B4 /* RessourcePanel.swift */; };
 		FD51BFFA241D381A00E1C3B4 /* RessourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFF9241D381A00E1C3B4 /* RessourceView.swift */; };
@@ -28,6 +29,7 @@
 		FD9580B5241BE89C001E0252 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9580B4241BE89C001E0252 /* SettingsStore.swift */; };
 		FD9580B7241BE918001E0252 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9580B6241BE918001E0252 /* MainView.swift */; };
 		FD9580B9241BE9E1001E0252 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9580B8241BE9E1001E0252 /* SettingsView.swift */; };
+		FD967F13242503F70071596C /* changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = FD967F12242503F70071596C /* changelog.md */; };
 		FDE3DA29241EBAC600ACE535 /* ActionGroupControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE3DA28241EBAC600ACE535 /* ActionGroupControll.swift */; };
 		FDE3DA2C241EBB3D00ACE535 /* ControllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE3DA2B241EBB3D00ACE535 /* ControllButton.swift */; };
 		FDE3DA2F241EC0B200ACE535 /* ControllToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE3DA2E241EC0B200ACE535 /* ControllToggle.swift */; };
@@ -44,6 +46,7 @@
 		27968A45AC3853FA98D1F3B5 /* Pods-KerbalKompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerbalKompanion.debug.xcconfig"; path = "Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion.debug.xcconfig"; sourceTree = "<group>"; };
 		57C5B807525F6FC97D2FE1B4 /* Pods-KerbalKompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerbalKompanion.release.xcconfig"; path = "Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion.release.xcconfig"; sourceTree = "<group>"; };
 		E941F37EA2F402CF5DBFAF66 /* libPods-KerbalKompanion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KerbalKompanion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD3888372424E60C0006EA4B /* Gauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gauge.swift; sourceTree = "<group>"; };
 		FD51BFF7241D37D800E1C3B4 /* RessourcePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessourcePanel.swift; sourceTree = "<group>"; };
 		FD51BFF9241D381A00E1C3B4 /* RessourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessourceView.swift; sourceTree = "<group>"; };
 		FD51BFFB241D3F3800E1C3B4 /* OtherPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPanel.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		FD9580B4241BE89C001E0252 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		FD9580B6241BE918001E0252 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FD9580B8241BE9E1001E0252 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FD967F12242503F70071596C /* changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = changelog.md; sourceTree = "<group>"; };
 		FDE3DA28241EBAC600ACE535 /* ActionGroupControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionGroupControll.swift; sourceTree = "<group>"; };
 		FDE3DA2B241EBB3D00ACE535 /* ControllButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllButton.swift; sourceTree = "<group>"; };
 		FDE3DA2E241EC0B200ACE535 /* ControllToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllToggle.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 				FD653CDA241D276E00269DE9 /* PanelOptionButton.swift */,
 				FD51BFF9241D381A00E1C3B4 /* RessourceView.swift */,
 				FD51BFFD241D3F6800E1C3B4 /* DataRow.swift */,
+				FD3888372424E60C0006EA4B /* Gauge.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 		FDF214B1241AE56100606C8B = {
 			isa = PBXGroup;
 			children = (
+				FD967F12242503F70071596C /* changelog.md */,
 				FDF214BC241AE56100606C8B /* KerbalKompanion */,
 				FDF214BB241AE56100606C8B /* Products */,
 				A963FA00B63FCB83564CF52F /* Pods */,
@@ -302,6 +308,7 @@
 				FDF214CA241AE56500606C8B /* LaunchScreen.storyboard in Resources */,
 				FDF214C7241AE56500606C8B /* Preview Assets.xcassets in Resources */,
 				FDF214C4241AE56500606C8B /* Assets.xcassets in Resources */,
+				FD967F13242503F70071596C /* changelog.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +346,7 @@
 			files = (
 				FD9580B5241BE89C001E0252 /* SettingsStore.swift in Sources */,
 				FD653CD3241D201D00269DE9 /* ColorScheme.swift in Sources */,
+				FD3888382424E60C0006EA4B /* Gauge.swift in Sources */,
 				FDE3DA35241ECB4800ACE535 /* GridItem.swift in Sources */,
 				FDE3DA2C241EBB3D00ACE535 /* ControllButton.swift in Sources */,
 				FDF214BE241AE56100606C8B /* AppDelegate.swift in Sources */,
@@ -513,6 +521,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = "1.0.0-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = com.noahkamara.KerbalKompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -535,6 +544,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = "1.0.0-alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = com.noahkamara.KerbalKompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -571,7 +581,7 @@
 			repositoryURL = "https://github.com/noahkamara/TelemachusKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = "1.0.0-alpha.4";
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

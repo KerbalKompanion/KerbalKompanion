@@ -40,6 +40,10 @@ struct SettingsDetail: View {
             self.settings.ip    = self.ipAdress
             self.settings.port  = Int(port) ?? self.settings.port
             self.settings.rate  = Int(rate) ?? self.settings.rate
+            self.telemachus.setRate(Int(rate) ?? self.settings.rate)
+            self.rate   = String(self.settings.rate)
+            self.port   = String(self.settings.port)
+            self.ipAdress     = self.settings.ip
         }
         
         var body: some View {
