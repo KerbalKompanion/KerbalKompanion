@@ -13,9 +13,20 @@ struct MainViewDetail: View {
     @EnvironmentObject var settings: SettingsStore
     @EnvironmentObject var telemachus: TelemachusClient
     @Binding var selectedView: MainView.MainView
+    @Binding var error: AlertError?
+
     
     var body: some View {
-        containedView()
+        if self.telemachus.isConnected {
+            return containedView()
+        } else {
+            return AnyView(
+                SetUpView(error: self.$error)
+                    .environmentObject(self.settings)
+                    .environmentObject(self.telemachus)
+            )
+                
+        }
     }
 
     func containedView() -> AnyView {

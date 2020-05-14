@@ -30,6 +30,7 @@
 		FD9580B7241BE918001E0252 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9580B6241BE918001E0252 /* MainView.swift */; };
 		FD9580B9241BE9E1001E0252 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9580B8241BE9E1001E0252 /* SettingsView.swift */; };
 		FD967F13242503F70071596C /* changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = FD967F12242503F70071596C /* changelog.md */; };
+		FDAC8FF2246DBC60007E129B /* SetUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAC8FF1246DBC60007E129B /* SetUpView.swift */; };
 		FDE3DA29241EBAC600ACE535 /* ActionGroupControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE3DA28241EBAC600ACE535 /* ActionGroupControll.swift */; };
 		FDE3DA2C241EBB3D00ACE535 /* ControllButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE3DA2B241EBB3D00ACE535 /* ControllButton.swift */; };
 		FDE3DA2F241EC0B200ACE535 /* ControllToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE3DA2E241EC0B200ACE535 /* ControllToggle.swift */; };
@@ -67,6 +68,7 @@
 		FD9580B6241BE918001E0252 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FD9580B8241BE9E1001E0252 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FD967F12242503F70071596C /* changelog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = changelog.md; sourceTree = "<group>"; };
+		FDAC8FF1246DBC60007E129B /* SetUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpView.swift; sourceTree = "<group>"; };
 		FDE3DA28241EBAC600ACE535 /* ActionGroupControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionGroupControll.swift; sourceTree = "<group>"; };
 		FDE3DA2B241EBB3D00ACE535 /* ControllButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllButton.swift; sourceTree = "<group>"; };
 		FDE3DA2E241EC0B200ACE535 /* ControllToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllToggle.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				FD9580B8241BE9E1001E0252 /* SettingsView.swift */,
 				FD6754FC241DB56E0071F4A1 /* SettingsDetailViews.swift */,
+				FDAC8FF1246DBC60007E129B /* SetUpView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				FD51BFFC241D3F3800E1C3B4 /* OtherPanel.swift in Sources */,
 				FD653CD6241D26FB00269DE9 /* StatusIndicatorPanel.swift in Sources */,
 				FDF214C0241AE56100606C8B /* SceneDelegate.swift in Sources */,
+				FDAC8FF2246DBC60007E129B /* SetUpView.swift in Sources */,
 				FD675504241DCF060071F4A1 /* MainMenu.swift in Sources */,
 				FD6754FD241DB56E0071F4A1 /* SettingsDetailViews.swift in Sources */,
 				FD51BFFE241D3F6800E1C3B4 /* DataRow.swift in Sources */,

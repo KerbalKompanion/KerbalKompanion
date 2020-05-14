@@ -44,7 +44,7 @@ struct MainView: View {
                         HStack {
                             MainMenu(selectedView: self.$selectedView)
                                 .frame(width: 100, height: geo.size.height)
-                            MainViewDetail(selectedView: self.$selectedView)
+                            MainViewDetail(selectedView: self.$selectedView, error: self.$error)
                                 .frame(width: geo.size.width-100, height: geo.size.height)
                         }
                     }

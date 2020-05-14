@@ -24,7 +24,7 @@ struct SettingsDetail: View {
             case .appearance: return AnyView(Appearence().environmentObject(self.telemachus).environmentObject(self.settings))
             case .betaFeatures: return AnyView(BetaFeatures().environmentObject(self.telemachus).environmentObject(self.settings))
             case .about: return AnyView(About().environmentObject(self.telemachus).environmentObject(self.settings))
-            default: return AnyView(Text("hi"))
+//            default: return AnyView(Text("hi"))
         }
     }
     
