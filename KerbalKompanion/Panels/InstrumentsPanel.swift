@@ -58,13 +58,13 @@ struct InstrumentsPanel: View {
                             
                     }
                     
-                    if envPane {
-                        VStack() {
-                            Gauge(label: "G-Force", value: self.data.environment.geeforce, max: 15, error: 0.6)
-                            Gauge(label: "G-Force", value: self.data.environment.geeforce, max: 15, error: 0.6)
-                            Gauge(label: "G-Force", value: self.data.environment.geeforce, max: 15, error: 0.6)
-                        }.padding().background(RoundedBackground())
-                    }
+//                    if envPane {
+//                        VStack() {
+//                            Gauge(label: "G-Force", value: self.data.environment.geeforce, max: 15, error: 0.6)
+//                            Gauge(label: "G-Force", value: self.data.environment.geeforce, max: 15, error: 0.6)
+//                            Gauge(label: "G-Force", value: self.data.environment.geeforce, max: 15, error: 0.6)
+//                        }.padding().background(RoundedBackground())
+//                    }
                 }
             }.padding(.horizontal, 22)
             Spacer()

@@ -14,18 +14,18 @@ struct SetUpView: View {
     @EnvironmentObject var telemachus: TelemachusClient
     @Binding var error: AlertError?
     
-    @State var ipAdress: String = ""
+    @State var ipAddress: String = ""
     @State var port: String = ""
     @State var rate: String = ""
     
     func testConnection() {
-        self.settings.ip    = self.ipAdress
+        print(self.ipAddress, self.port, self.rate)
+        self.settings.ip    = self.ipAddress
         self.settings.port  = Int(port) ?? self.settings.port
         self.settings.rate  = Int(rate) ?? self.settings.rate
-        self.telemachus.setRate(Int(rate) ?? self.settings.rate)
         self.rate   = String(self.settings.rate)
         self.port   = String(self.settings.port)
-        self.ipAdress     = self.settings.ip
+        self.ipAddress     = self.settings.ip
         
         self.telemachus.connect(self.settings.ip, self.settings.port) { result in
             switch result {
@@ -47,7 +47,7 @@ struct SetUpView: View {
                         Text("The adress of the pc running KSP").font(.system(.caption, design: .monospaced)).bold()
                     }
                     Spacer()
-                    TextField("255.255.255.255", text: self.$ipAdress)
+                    TextField("255.255.255.255", text: self.$ipAddress)
                         .font(.system(.callout, design: .monospaced))
                         .padding(10)
                         .background(RoundedRectangle(cornerRadius: 10).foregroundColor(CS.shadow_dark))
@@ -95,7 +95,7 @@ struct SetUpView: View {
         }.frame(width: 600)
         
         .onAppear {
-            self.ipAdress = self.settings.ip
+            self.ipAddress = self.settings.ip
             self.port = String(self.settings.port)
         }
     }

@@ -66,7 +66,7 @@ struct AttitudeIndicator: UIViewRepresentable {
     func updateUIView(_ view: PrimaryFlightDisplayView, context: Context) {
         withAnimation(.easeInOut(duration: 0.1)) {
             view.setAttitude(
-                rollRadians: deg2rad(self.data.vessel.attitude.roll),
+                rollRadians: deg2rad(-self.data.vessel.attitude.roll),
                 pitchRadians: deg2rad(self.data.vessel.attitude.pitch)
             )
             view.setHeadingDegree(self.data.vessel.attitude.heading)

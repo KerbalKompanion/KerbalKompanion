@@ -20,14 +20,14 @@ struct Gauge: View {
     }
     var body: some View {
         GeometryReader() { geo in
-            VStack {
+            VStack(spacing: 0) {
                 HStack {
                     Text(self.label).font(.system(.subheadline, design: .monospaced)).bold()
                     Spacer()
                     // TODO: Fix this
                     Text(String(format: "%04.2f", self.value))
                         .font(.system(.callout, design: .monospaced)).bold()
-                }.background(CS.shadow_dark).padding(0)
+                }.padding(0)
 
                 Capsule()
                     .stroke(CS.main_bg, lineWidth: 4)
@@ -45,6 +45,7 @@ struct Gauge: View {
                             .shadow(color: CS.shadow_dark, radius: 8, x: 5, y: 5)
                         ,alignment: .leading
                 ).padding(0)
+                    .clipShape(Capsule())
             }
         }.padding()
     }

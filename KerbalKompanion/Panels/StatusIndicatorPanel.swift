@@ -49,10 +49,10 @@ struct StatusIndicatorPanel: View {
             }.background(RoundedBackground(isInner: self.showPanelOptions)).padding([.leading, .trailing, .bottom], 22).padding(.top, 12)
             
             Group() {
-                VStack(alignment: .leading, spacing: 22) {
+                VStack(alignment: .leading, spacing: 52) {
                     //MARK: ENGINE INDICATOR LIGHTS
                     if engineLights {
-                        VStack(alignment: .leading) {
+                        VStack(alignment: .leading, spacing: 5) {
                             Text("RESSOURCE STATUS").font(.system(.subheadline, design: .monospaced)).bold()
                             Divider()
                             IndicatorView.Static(status: data.vessel.lowFuelWarning, label: "FUEL LOW", trueLight: .red, falseLight: .gray)
@@ -63,7 +63,7 @@ struct StatusIndicatorPanel: View {
                     
                     //MARK: WARNING LIGHTS
                     if warningLights {
-                        VStack(alignment: .leading) {
+                        VStack(alignment: .leading, spacing: 5) {
                             Text("WARNING LIGHTS").font(.system(.subheadline, design: .monospaced)).bold()
                             Divider()
                             IndicatorView.Blinking(status: data.vessel.lowFuelWarning, label: "FUEL LOW", trueLight: .red, falseLight: .gray)
@@ -75,7 +75,7 @@ struct StatusIndicatorPanel: View {
                     
                     //MARK: INFO LIGHTS
                     if infoLights {
-                        VStack(alignment: .leading) {
+                        VStack(alignment: .leading, spacing: 5) {
                             Text("INFO LIGHTS").font(.system(.subheadline, design: .monospaced)).bold()
                             Divider()
                             IndicatorView.Static(status: data.vessel.light, label: "LIGHT", trueLight: .yellow, falseLight: .gray)

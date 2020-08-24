@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5A6F2C511254515213827602 /* libPods-KerbalKompanion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E941F37EA2F402CF5DBFAF66 /* libPods-KerbalKompanion.a */; };
+		FD01123524F30C030048FD61 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD01123724F30C030048FD61 /* Localizable.strings */; };
+		FD01123A24F30F120048FD61 /* TelemachusKit in Frameworks */ = {isa = PBXBuildFile; productRef = FD01123924F30F120048FD61 /* TelemachusKit */; };
 		FD0F2A6924F2DAC600A7FAB2 /* KerbalKompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0F2A6824F2DAC600A7FAB2 /* KerbalKompanionUITests.swift */; };
 		FD3888382424E60C0006EA4B /* Gauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3888372424E60C0006EA4B /* Gauge.swift */; };
-		FD51BFF6241D36AE00E1C3B4 /* TelemachusKit in Frameworks */ = {isa = PBXBuildFile; productRef = FD51BFF5241D36AE00E1C3B4 /* TelemachusKit */; };
 		FD51BFF8241D37D800E1C3B4 /* RessourcePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFF7241D37D800E1C3B4 /* RessourcePanel.swift */; };
 		FD51BFFA241D381A00E1C3B4 /* RessourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFF9241D381A00E1C3B4 /* RessourceView.swift */; };
 		FD51BFFC241D3F3800E1C3B4 /* OtherPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD51BFFB241D3F3800E1C3B4 /* OtherPanel.swift */; };
@@ -57,6 +58,8 @@
 		27968A45AC3853FA98D1F3B5 /* Pods-KerbalKompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerbalKompanion.debug.xcconfig"; path = "Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion.debug.xcconfig"; sourceTree = "<group>"; };
 		57C5B807525F6FC97D2FE1B4 /* Pods-KerbalKompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KerbalKompanion.release.xcconfig"; path = "Target Support Files/Pods-KerbalKompanion/Pods-KerbalKompanion.release.xcconfig"; sourceTree = "<group>"; };
 		E941F37EA2F402CF5DBFAF66 /* libPods-KerbalKompanion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KerbalKompanion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD01123224F30BE90048FD61 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		FD01123624F30C030048FD61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FD0F2A5A24F2DAAF00A7FAB2 /* KerbalKompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerbalKompanionTests.swift; sourceTree = "<group>"; };
 		FD0F2A5C24F2DAAF00A7FAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD0F2A6624F2DAC600A7FAB2 /* KerbalKompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KerbalKompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD51BFF6241D36AE00E1C3B4 /* TelemachusKit in Frameworks */,
+				FD01123A24F30F120048FD61 /* TelemachusKit in Frameworks */,
 				5A6F2C511254515213827602 /* libPods-KerbalKompanion.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +261,7 @@
 		FDF214BC241AE56100606C8B /* KerbalKompanion */ = {
 			isa = PBXGroup;
 			children = (
+				FD01123724F30C030048FD61 /* Localizable.strings */,
 				FDF214BD241AE56100606C8B /* AppDelegate.swift */,
 				FDF214BF241AE56100606C8B /* SceneDelegate.swift */,
 				FD675507241DD05D0071F4A1 /* Main */,
@@ -320,7 +324,7 @@
 			);
 			name = KerbalKompanion;
 			packageProductDependencies = (
-				FD51BFF5241D36AE00E1C3B4 /* TelemachusKit */,
+				FD01123924F30F120048FD61 /* TelemachusKit */,
 			);
 			productName = KerbalKompanion;
 			productReference = FDF214BA241AE56100606C8B /* KerbalKompanion.app */;
@@ -352,10 +356,11 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = FDF214B1241AE56100606C8B;
 			packageReferences = (
-				FD51BFF4241D36AE00E1C3B4 /* XCRemoteSwiftPackageReference "TelemachusKit" */,
+				FD01123824F30F120048FD61 /* XCRemoteSwiftPackageReference "TelemachusKit" */,
 			);
 			productRefGroup = FDF214BB241AE56100606C8B /* Products */;
 			projectDirPath = "";
@@ -380,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF214CA241AE56500606C8B /* LaunchScreen.storyboard in Resources */,
+				FD01123524F30C030048FD61 /* Localizable.strings in Resources */,
 				FDF214C7241AE56500606C8B /* Preview Assets.xcassets in Resources */,
 				FDF214C4241AE56500606C8B /* Assets.xcassets in Resources */,
 			);
@@ -467,10 +473,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FD01123724F30C030048FD61 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FD01123624F30C030048FD61 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		FDF214C8241AE56500606C8B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FDF214C9241AE56500606C8B /* Base */,
+				FD01123224F30BE90048FD61 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -522,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -585,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -653,7 +670,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "1.0.0-alpha";
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.noahkamara.KerbalKompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -676,7 +693,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "1.0.0-alpha";
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.noahkamara.KerbalKompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -717,20 +734,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FD51BFF4241D36AE00E1C3B4 /* XCRemoteSwiftPackageReference "TelemachusKit" */ = {
+		FD01123824F30F120048FD61 /* XCRemoteSwiftPackageReference "TelemachusKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/noahkamara/TelemachusKit.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				kind = exactVersion;
+				version = "1.0.0-alpha.1";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FD51BFF5241D36AE00E1C3B4 /* TelemachusKit */ = {
+		FD01123924F30F120048FD61 /* TelemachusKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FD51BFF4241D36AE00E1C3B4 /* XCRemoteSwiftPackageReference "TelemachusKit" */;
+			package = FD01123824F30F120048FD61 /* XCRemoteSwiftPackageReference "TelemachusKit" */;
 			productName = TelemachusKit;
 		};
 /* End XCSwiftPackageProductDependency section */

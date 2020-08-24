@@ -119,21 +119,22 @@ struct SettingsDetail: View {
         var body: some View {
             ScrollView(.vertical, showsIndicators: true) {
                 VStack() {
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("DARK MODE").font(.system(.subheadline, design: .monospaced)).bold()
-                            Text("Choose you preference").font(.system(.caption, design: .monospaced)).bold()
-                        }
-                        Spacer()
-                        Picker(
-                            selection: $settings.darkModePreference,
-                            label: Text("Dark Mode Preference")
-                        ) {
-                            ForEach(SettingsStore.DarkModePreference.allCases, id: \.self) {
-                                Text($0.rawValue).tag($0)
-                            }
-                        }.pickerStyle(SegmentedPickerStyle()).background(RoundedBackground()).padding(15)
-                    }.padding().background(RoundedBackground()).padding([.leading, .trailing, .top], 22)
+                    Text("Coming Soon")
+//                    HStack {
+//                        VStack(alignment: .leading) {
+//                            Text("DARK MODE").font(.system(.subheadline, design: .monospaced)).bold()
+//                            Text("Choose you preference").font(.system(.caption, design: .monospaced)).bold()
+//                        }
+//                        Spacer()
+//                        Picker(
+//                            selection: $settings.darkModePreference,
+//                            label: Text("Dark Mode Preference")
+//                        ) {
+//                            ForEach(SettingsStore.DarkModePreference.allCases, id: \.self) {
+//                                Text($0.rawValue).tag($0)
+//                            }
+//                        }.pickerStyle(SegmentedPickerStyle()).background(RoundedBackground()).padding(15)
+//                    }.padding().background(RoundedBackground()).padding([.leading, .trailing, .top], 22)
                     
                     
                     Button(action: {
@@ -154,16 +155,15 @@ struct SettingsDetail: View {
     
     
     struct BetaFeatures: View {
+        @State var toggle: Bool = false
         var loremIpsum: String = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
         var body: some View {
             ScrollView(.vertical, showsIndicators: true) {
                 VStack {
-                    FeatureItem(label: "Feature A", description: self.loremIpsum)
-                    FeatureItem(label: "Feature B", description: self.loremIpsum)
-                    FeatureItem(label: "Feature C", description: self.loremIpsum)
-                    FeatureItem(label: "Feature D", description: self.loremIpsum)
-                    FeatureItem(label: "Feature E", description: self.loremIpsum)
-                    FeatureItem(label: "Feature F", description: self.loremIpsum)
+//                    FeatureItem(label: "Feature A",
+//                                description: self.loremIpsum,
+//                                toggle: self.$toggle)
+                    Text("Coming Soon")
                 }
             }
         }
@@ -171,7 +171,7 @@ struct SettingsDetail: View {
         struct FeatureItem: View {
             var label: String
             var description: String
-            @State var toggle: Bool = false
+            @Binding var toggle: Bool
             var body: some View {
                 Button(action: {
                     self.toggle.toggle()
