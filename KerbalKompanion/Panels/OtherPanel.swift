@@ -35,7 +35,7 @@ struct OtherPanel: View {
                     }
                 } ) {
                     HStack {
-                        Text("OTHER")
+                        Text("panels.other.headline")
                         Image(systemName: "chevron.right.circle.fill")
                             .rotationEffect(.degrees(self.showPanelOptions ? 90 : 0))
                             .font(.system(.headline, design: .monospaced))
@@ -44,11 +44,11 @@ struct OtherPanel: View {
                 if self.showPanelOptions {
                     Divider()
                     VStack(alignment: .leading) {
-                        PanelOptionButton(status: $locPane, label: "Location")
+                        PanelOptionButton(status: $locPane, label: "panels.other.loc.label")
                         Divider()
-                        PanelOptionButton(status: $envPane, label: "Environment")
+                        PanelOptionButton(status: $envPane, label: "panels.other.env.label")
                         Divider()
-                        PanelOptionButton(status: $targetPane, label: "Target")
+                        PanelOptionButton(status: $targetPane, label: "panels.other.target.label")
                     }.accentColor(.primary).padding([.leading, .trailing, .bottom]).frame(width: 180)
                 }
             }.background(RoundedBackground(isInner: self.showPanelOptions)).padding([.leading, .trailing, .bottom], 22).padding(.top, 12)
@@ -59,31 +59,31 @@ struct OtherPanel: View {
                     //MARK: Location
                     if locPane {
                         VStack() {
-                            Text("LOCATION").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("panels.other.loc.label.upper").font(.system(.subheadline, design: .monospaced)).bold()
                             Divider()
-                            DataRow(label: "LAT", value: String(format: "%06.f", self.data.vessel.coordinates.latitude))
-                            DataRow(label: "LONG", value: String(format: "%06.f", self.data.vessel.coordinates.longitude))
-                            DataRow(label: "ALT", value: String(format: "%04d", Int(self.data.vessel.altitude)))
+                            DataRow(label: "panels.other.loc.latitude.label", value: String(format: "%06.f", self.data.vessel.coordinates.latitude))
+                            DataRow(label: "panels.other.loc.longitude.label", value: String(format: "%06.f", self.data.vessel.coordinates.longitude))
+                            DataRow(label: "panels.other.loc.altitude.label", value: String(format: "%04d", Int(self.data.vessel.altitude)))
                         }.padding().background(RoundedBackground())
                     }
                     
                     //MARK: Environment
                     if envPane {
                         VStack() {
-                            Text("ENVIRONMENT").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("panels.other.env.label.upper").font(.system(.subheadline, design: .monospaced)).bold()
                             Divider()
                             DataRow(
-                                label: "TERRAIN HEIGHT",
+                                label: "panels.other.env.terrainHeight.label",
                                 value: String(format: "%04d", Int(self.data.environment.terrainHeight))
                             )
                             Divider()
                             DataRow(
-                                label: "ATMOS DENS.",
+                                label: "panels.other.env.atmDens.label",
                                 value: String(format: "%04.1f", self.data.environment.atmosphericDensity)
                             )
                             Divider()
                             DataRow(
-                                label: "Gee Force",
+                                label: "panels.other.env.gForce.label",
                                 value: String(format: "%04.2f", self.data.environment.geeforce)
                             )
                             Divider()
@@ -93,26 +93,26 @@ struct OtherPanel: View {
                     //MARK: Target
                     if targetPane {
                         VStack(alignment: .leading) {
-                            Text("TARGET INFO").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("panels.other.target.label.upper").font(.system(.subheadline, design: .monospaced)).bold()
                             Divider()
                             if target != nil {
                                 DataRow(label: "\'\(target!.name)\'", value: target!.type.uppercased())
                                 if showTargetDetail {
                                     Divider()
-                                    DataRow(label: "DISTANCE", value: 1230)
+                                    DataRow(label: "panels.other.target.distance.label", value: 1230)
                                     Divider()
-                                    DataRow(label: "VELOCITY", value: String(format: "%.1f", target!.velocity))
-                                    DataRow(label: "REL. VELOCITY", value: String(format: "%.1f", target!.relativeVelocity))
+                                    DataRow(label: "panels.other.target.velocity.label", value: String(format: "%.1f", target!.velocity))
+                                    DataRow(label: "panels.other.target.relVelocity.label", value: String(format: "%.1f", target!.relativeVelocity))
                                 }
                                 HStack {
                                     Image(systemName: "chevron.compact.down")
                                         .rotationEffect(.degrees(self.showTargetDetail ? 180 : 0))
-                                    Text("DETAIL")
+                                    Text("actions.showDetail")
                                 }.onTapGesture {
                                     self.showTargetDetail.toggle()
                                 }
                             } else {
-                                DataRow(label: "\t", value: "NO TARGET")
+                                DataRow(label: "panels.other.target.noTarget.label", value: "")
                             }
                         }.padding().background(RoundedBackground())
                     }

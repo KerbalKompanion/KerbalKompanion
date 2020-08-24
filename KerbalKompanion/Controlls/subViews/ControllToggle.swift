@@ -13,15 +13,15 @@ struct ControllToggle: View {
     @EnvironmentObject var telemachus: TelemachusClient
     var key: TelemachusClient.Command.Key
     @Binding var state: Bool
-    var label: (short: String, label: String) {
+    var label: (short: LocalizedStringKey, label: LocalizedStringKey) {
         switch self.key {
-            case .brake: return (short: "BRAKE", label: "TOGGLE BRAKE")
-            case .gear: return (short: "GEARS", label: "TOGGLE GEARS")
-            case .light: return (short: "LIGHT", label: "TOGGLE LIGHT")
-            case .rcs: return (short: " RCS ", label: " TOGGLE RCS ")
-            case .sas: return (short: " SAS ", label: " TOGGLE SAS ")
-            case .abort: return (short: "ABORT", label: "TOGGLE ABORT")
-            default: return (short: "ERR", label: "ERROR")
+            case .brake: return (short: "controlls.toggles.toggleBrake.label.short", label: "controlls.toggles.toggleBrake.label")
+            case .gear: return (short: "controlls.toggles.toggleGears.label.short", label: "controlls.toggles.toggleGears.label")
+            case .light: return (short: "controlls.toggles.toggleLight.label.short", label: "controlls.toggles.toggleLight.label")
+            case .rcs: return (short: "controlls.toggles.toggleRCS.label.short", label: "controlls.toggles.toggleRCS.label")
+            case .sas: return (short: "controlls.toggles.toggleSAS.label.short", label: "controlls.toggles.toggleSAS.label")
+            case .abort: return (short: "controlls.toggles.toggleAbort.label.short", label: "controlls.toggles.toggleAbort.label")
+            default: return (short: "general.error.short", label: "general.error")
         }
     }
     

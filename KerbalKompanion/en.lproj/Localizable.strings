@@ -1,7 +1,149 @@
-/* 
-  Localizable.strings
-  KerbalKompanion
+/*
+ Localizable.strings
+ KerbalKompanion
+ 
+ Created by Noah Kamara on 23.08.20.
+ Copyright © 2020 Noah Kamara. All rights reserved.
+ */
 
-  Created by Noah Kamara on 23.08.20.
-  Copyright © 2020 Noah Kamara. All rights reserved.
-*/
+// General
+"general.error" = "Error";
+
+// Actions / Button Labels
+"actions.save" = "Save";
+"actions.showDetail" = "Details";
+
+
+
+// GAME STATUS
+"gameStatus" = "game status";
+"gameStatus.inFlight" = "IN FLIGHT";
+"gameStatus.noVessel" = "NO VESSEL";
+"gameStatus.paused" = "PAUSED";
+"gameStatus.noPower" = "NO POWER";
+"gameStatus.disabled" = "DISABLED";
+"gameStatus.notFound" = "NOT FOUND";
+"gameStatus.error" = "ERROR";
+
+
+
+// CONNECTION STATUS
+"connStat.connected" = "CONNECTED";
+"connStat.disconnected" = "DISCONNECTED";
+
+
+
+// PREFERENCES VIEW
+///     Menu
+"pref.connection" = "Connection";
+"pref.appearance" = "Appearance";
+"pref.betaFeatures" = "Beta Features";
+"pref.about" = "About";
+
+///     Connection
+"pref.connection.ip.label" = "IP Address";
+"pref.connection.ip.descr" = "The adress of the pc running KSP";
+"pref.connection.port.label" = "Port Number";
+"pref.connection.port.descr" = "The standard is 8085";
+
+"pref.connection.refreshRate.label" = "Refresh Rate";
+"pref.connection.refreshRate.descr" = "Rate at which data is transmitted";
+
+///     Appearance
+"pref.appearance.darkMode" = "Dark Mode";
+"pref.appearance.lightMode" = "Light Mode";
+"pref.appearance.darkMode.descr" = "";
+
+///     About
+"pref.about.website.label" = "About the Developer";
+"pref.about.website.descr" = "Website";
+
+
+
+// TOP PANEL
+"toppanel.prefButton.label" = "PREFERENCES";
+"toppanel.heightFromTerrain.label" = "HEIGHT FROM TERRAIN";
+"toppanel.altitude.label" = "ALTITUDE";
+"toppanel.vertSpeed.label" = "VERT SPD (m/s)";
+"toppanel.surfSpeed.label" = "SURF SPD (m/s)";
+"toppanel.heading.label" = "HDG °";
+"toppanel.pitch.label" = "PITCH (°)";
+
+
+
+// PANELS
+"panels.instruments.headline" = "INSTRUMENTS";
+"panels.instruments.attInd.label" = "Attitude Indicator";
+"panels.instruments.gForce.label" = "G-Force";
+
+"panels.other.headline" = "OTHER";
+"panels.other.loc.label" = "Location";
+"panels.other.loc.label.upper" = "LOCATION";
+"panels.other.loc.latitude.label" = "LAT";
+"panels.other.loc.longitude.label" = "LONG";
+"panels.other.loc.altitude.label" = "ALT";
+
+
+"panels.other.env.label" = "Environment";
+"panels.other.env.label.upper" = "ENVIRONMENT";
+"panels.other.env.terrainHeight.label" = "Terrain";
+"panels.other.env.atmDens.label" = "Atm. Dens.";
+"panels.other.env.gForce.label" = "G-Force";
+
+"panels.other.target.label" = "Target";
+"panels.other.target.noTarget.label" = "No Target";
+"panels.other.target.label.upper" = "TARGET INFO";
+"panels.other.target.distance.label" = "Distance";
+"panels.other.target.velocity.label" = "Velocity";
+"panels.other.target.relVelocity.label" = "Rel. Velocity";
+
+"panels.ressources.label" = "RESSOURCE";
+"panels.ressources.overview.label" = "Overview";
+"panels.ressources.liquid.label" = "Liquid";
+"panels.ressources.liquid.label.long" = "Liquid Fuel";
+"panels.ressources.liquid.label.short" = "LQD";
+"panels.ressources.electric.label" = "Electric";
+"panels.ressources.electric.label.long" = "Electric Charge";
+"panels.ressources.electric.label.short" = " EC";
+"panels.ressources.intakeAir.label" = "Air";
+"panels.ressources.intakeAir.label.long" = "Air Intake";
+"panels.ressources.intakeAir.label.short" = " IA";
+
+"panels.indicators.label" = "INDICATORS";
+"panels.indicators.warnings.label" = "Warnings";
+"panels.indicators.engine.label" = "Engine";
+"panels.indicators.infos.label" = "Infos";
+"panels.indicators.ressourceStat.label" = "Ressource Status";
+
+"panels.indicators.warnings.label.upper" = "WARNING LIGHTS";
+"panels.indicators.warnings.fuelLow.label" = "LO FUEL";
+"panels.indicators.warnings.flameOut.label" = "FLAME OUT";
+"panels.indicators.warnings.tempHigh.label" = "HI TEMP";
+"panels.indicators.warnings.altLow.label" = "LO ALT";
+
+"panels.indicators.engine.label.upper" = "Engine";
+
+"panels.indicators.infos.label.upper" = "INFO LIGHTS";
+"panels.indicators.infos.light.label" = "LIGHT";
+"panels.indicators.infos.gear.label" = "GEAR";
+"panels.indicators.infos.breaks.label" = "BREAKS";
+
+
+// CONTROLLS
+"controlls.actionGroups.label"= "Action Groups";
+"controlls.actionGroup.label" = "ACTION GROUP";
+"controlls.abort.label" = "ABORT";
+
+"controlls.toggles.label" = "Vessel System Toggles";
+"controlls.toggles.toggleBrake.label" = "TOGGLE BRAKE";
+"controlls.toggles.toggleBrake.label.short" = "BRAKE";
+"controlls.toggles.toggleGears.label" = "TOGGLE GEARS";
+"controlls.toggles.toggleGears.label.short" = "GEARS";
+"controlls.toggles.toggleLight.label" = "TOGGLE LIGHT";
+"controlls.toggles.toggleLight.label.short" = "LIGHT";
+"controlls.toggles.toggleRCS.label" = " TOGGLE RCS ";
+"controlls.toggles.toggleRCS.label.short" = " RCS ";
+"controlls.toggles.toggleSAS.label" = " TOGGLE SAS ";
+"controlls.toggles.toggleSAS.label.short" = " SAS ";
+"controlls.toggles.toggleAbort.label" = "TOGGLE Abort";
+"controlls.toggles.toggleAbort.label.short" = "Abort";

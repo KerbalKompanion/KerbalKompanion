@@ -17,7 +17,7 @@ struct MainViewDetail: View {
 
     
     var body: some View {
-        if self.telemachus.isConnected {
+        if self.telemachus.isConnected || true {
             return containedView()
         } else {
             return AnyView(
@@ -90,17 +90,7 @@ struct MainViewDetail: View {
     struct FlightDisplayView: View {
         @EnvironmentObject var settings: SettingsStore
         @EnvironmentObject var telemachus: TelemachusClient
-                
-        @State var ipAdress: String = ""
-        @State var port: String = ""
-        @State var rate: String = ""
-        
-        func saveSettings() {
-            self.settings.ip    = self.ipAdress
-            self.settings.port  = Int(port) ?? self.settings.port
-            self.settings.rate  = Int(rate) ?? self.settings.rate
-        }
-        
+                        
         var body: some View {
             AttitudeIndicator(
                 data: self.$telemachus.data,

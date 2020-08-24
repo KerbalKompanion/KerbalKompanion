@@ -16,7 +16,7 @@ struct ToggleControll: View {
     }
     var body: some View {
         VStack(alignment: .center) {
-            Text("Vessel System Toggles").font(.system(.title, design: .monospaced))
+            Text("controlls.toggles.label").font(.system(.title, design: .monospaced))
             HStack {
                 Spacer()
                 VStack {

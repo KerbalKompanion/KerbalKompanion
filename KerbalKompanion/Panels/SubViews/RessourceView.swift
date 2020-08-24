@@ -11,7 +11,7 @@ import TelemachusKit
 
 class RessourceView {
     struct Graph: View {
-        var label: String
+        var label: LocalizedStringKey
         var fuel: TelemachusData.Vessel.Ressource.Fuel
         var body: some View {
             HStack {
@@ -31,7 +31,7 @@ class RessourceView {
     
     struct Detail: View {
         @EnvironmentObject var telemachus: TelemachusClient
-        var label: String
+        var label: LocalizedStringKey
         var fuel: TelemachusData.Vessel.Ressource.Fuel
         var time: Date {
             return self.telemachus.data.universalTime

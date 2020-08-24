@@ -32,7 +32,7 @@ struct RessourcePanel: View {
                     }
                 } ) {
                     HStack {
-                        Text("RESSOURCE")
+                        Text("panels.ressources.label")
                         Image(systemName: "chevron.right.circle.fill")
                             .rotationEffect(.degrees(self.showPanelOptions ? 90 : 0))
                             .font(.system(.headline, design: .monospaced))
@@ -41,11 +41,11 @@ struct RessourcePanel: View {
                 if self.showPanelOptions {
                     Divider()
                     VStack(alignment: .leading) {
-                        PanelOptionButton(status: $ressourceOverview, label: "Overview")
+                        PanelOptionButton(status: $ressourceOverview, label: "panels.ressources.overview.label")
                         Divider()
-                        PanelOptionButton(status: $liquidGauge, label: "Liquid")
+                        PanelOptionButton(status: $liquidGauge, label: "panels.ressources.liquid.label")
                         Divider()
-                        PanelOptionButton(status: $ecGauge, label: "Energy")
+                        PanelOptionButton(status: $ecGauge, label: "panels.ressources.electric.label")
                     }.accentColor(.primary).padding([.leading, .trailing, .bottom])
                 }
             }.background(RoundedBackground(isInner: self.showPanelOptions)).padding([.leading, .trailing, .bottom], 22).padding(.top, 12)
@@ -56,16 +56,16 @@ struct RessourcePanel: View {
                     //MARK: OVERVIEW
                     if ressourceOverview {
                         VStack(alignment: .leading) {
-                            RessourceView.Graph(label: "LQD", fuel: self.data.vessel.ressource.liquid)
-                            RessourceView.Graph(label: " EC", fuel: self.data.vessel.ressource.electricCharge)
-                            RessourceView.Graph(label: " IA", fuel: self.data.vessel.ressource.intakeAir)
+                            RessourceView.Graph(label: "panels.ressources.liquid.label.short", fuel: self.data.vessel.ressource.liquid)
+                            RessourceView.Graph(label: "panels.ressources.electric.label.short", fuel: self.data.vessel.ressource.electricCharge)
+                            RessourceView.Graph(label: "panels.ressources.intakeAir.label.short", fuel: self.data.vessel.ressource.intakeAir)
                         }.padding().background(RoundedBackground())
                     }
 
                     //MARK: LIQUID GAUGE
                     if liquidGauge {
                         RessourceView.Detail(
-                            label: "LIQUID FUEL",
+                            label: "panels.ressources.liquid.label.long",
                             fuel: self.data.vessel.ressource.liquid
                         ).environmentObject(self.telemachus)
                     }
@@ -73,7 +73,7 @@ struct RessourcePanel: View {
                     //MARK: EC Gauge
                     if ecGauge {
                         RessourceView.Detail(
-                            label: "ELECTRIC CHARGE",
+                            label: "panels.ressources.electric.label.long",
                             fuel: self.data.vessel.ressource.electricCharge
                         ).environmentObject(self.telemachus)
                     }

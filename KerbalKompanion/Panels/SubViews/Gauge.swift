@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 struct Gauge: View {
-    var label: String
+    var label: LocalizedStringKey
     var value: Double
     var max: Double
     var error: Double = 0.8

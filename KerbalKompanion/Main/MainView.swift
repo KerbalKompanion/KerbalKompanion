@@ -21,14 +21,14 @@ struct MainView: View {
         self.telemachus.onConnect = {
             
         }
-        self.telemachus.onDisconnect = { (error: Error?) in
-            DispatchQueue.main.async {
-                self.error = AlertError(title: "DISCONNECTED", reason: error?.localizedDescription ?? "")
-            }
-        }
+//        self.telemachus.onDisconnect = { (error: Error?) in
+//            DispatchQueue.main.async {
+//                self.error = AlertError(title: "DISCONNECTED", reason: error?.localizedDescription ?? "")
+//            }
+//        }
     }
     
-    func alert(title: String, reason: String) -> Alert {
+    func alert(title: LocalizedStringKey, reason: LocalizedStringKey) -> Alert {
         Alert(title: Text(title),
                 message: Text(reason),
                 dismissButton: .default(Text("OK"))
@@ -80,23 +80,21 @@ struct MainView_Previews: PreviewProvider {
 }
 
 struct AlertError: Identifiable {
-    var id: String {
-        return title+reason
-    }
-    let title: String
-    let reason: String
+    let id = UUID().uuidString
+    let title: LocalizedStringKey
+    let reason: LocalizedStringKey
 }
 
 extension TelemachusData.GameStatus {
-    var string: String {
+    var string: LocalizedStringKey {
         switch self {
-            case .inFlight: return "IN FLIGHT"
-            case .noVessel: return "NO VESSEL"
-            case .paused: return "PAUSED"
-            case .noPower: return "NO POWER"
-            case .disabled: return "DISABLED"
-            case .notFound: return "NOT FOUND"
-            case .error: return "ERROR"
+            case .inFlight: return LocalizedStringKey("gameStatus.inFlight")
+            case .noVessel: return LocalizedStringKey("gameStatus.noVessel")
+            case .paused: return LocalizedStringKey("gameStatus.paused")
+            case .noPower: return LocalizedStringKey("gameStatus.noPower")
+            case .disabled: return LocalizedStringKey("gameStatus.disabled")
+            case .notFound: return LocalizedStringKey("gameStatus.notFound")
+            case .error: return LocalizedStringKey("gameStatus.error")
         }
     }
 }

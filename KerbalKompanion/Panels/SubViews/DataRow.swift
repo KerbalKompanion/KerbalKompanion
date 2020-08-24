@@ -10,7 +10,7 @@ import SwiftUI
 import TelemachusKit
 
 struct DataRow: View {
-    var label: String
+    var label: LocalizedStringKey
     var value: Any?
     
     var valueString: String {

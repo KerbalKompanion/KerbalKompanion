@@ -20,28 +20,28 @@ struct SettingsView: View {
                 ScrollView() {
                     VStack() {
                         MenuItem(
-                            label: "Connection",
+                            label: "pref.connection",
                             icon: "antenna.radiowaves.left.and.right",
                             selectedPanel: self.$selectedPanel,
                             panel: .connection
                         )
                         
                         MenuItem(
-                            label: "Appearance",
+                            label: "pref.appearance",
                             icon: "paintbrush",
                             selectedPanel: self.$selectedPanel,
                             panel: .appearance
                         )
                         
                         MenuItem(
-                            label: "Beta Features",
+                            label: "pref.betaFeatures",
                             icon: "exclamationmark.triangle.fill",
                             selectedPanel: self.$selectedPanel,
                             panel: .betaFeatures
                         )
                         
                         MenuItem(
-                            label: "About",
+                            label: "pref.about",
                             icon: "person.fill",
                             selectedPanel: self.$selectedPanel,
                             panel: .about
@@ -64,7 +64,7 @@ struct SettingsView: View {
     }
     
     struct MenuItem: View {
-        var label: String
+        var label: LocalizedStringKey
         var icon: String
         @Binding var selectedPanel: SettingsView.SettingsPanel
         var panel: SettingsView.SettingsPanel

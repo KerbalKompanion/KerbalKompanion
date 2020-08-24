@@ -13,7 +13,7 @@ struct ActionGroupControll: View {
     @EnvironmentObject var telemachus: TelemachusClient
     var body: some View {
         VStack(alignment: .center) {
-            Text("Action Groups").font(.system(.title, design: .monospaced))
+            Text("controlls.actionGroups.label").font(.system(.title, design: .monospaced))
             HStack {
                 Spacer()
                 VStack {
