@@ -30,7 +30,7 @@ struct StatusIndicatorPanel: View {
                     }
                 } ) {
                     HStack {
-                        Text("INDICATORS")
+                        Text("panels.indicators.label")
                         Image(systemName: "chevron.right.circle.fill")
                             .rotationEffect(.degrees(self.showPanelOptions ? 90 : 0))
                             .font(.system(.headline, design: .monospaced))
@@ -39,48 +39,48 @@ struct StatusIndicatorPanel: View {
                 if self.showPanelOptions {
                     Divider()
                     VStack(alignment: .leading) {
-                        PanelOptionButton(status: $warningLights, label: "Warnings")
+                        PanelOptionButton(status: $warningLights, label: "panels.indicators.warnings.label")
                         Divider()
-                        PanelOptionButton(status: $engineLights, label: "Engine")
+                        PanelOptionButton(status: $engineLights, label: "panels.indicators.engine.label")
                         Divider()
-                        PanelOptionButton(status: $infoLights, label: "Infos")
+                        PanelOptionButton(status: $infoLights, label: "panels.indicators.infos.label")
                     }.accentColor(.primary).padding([.leading, .trailing, .bottom])
                 }
             }.background(RoundedBackground(isInner: self.showPanelOptions)).padding([.leading, .trailing, .bottom], 22).padding(.top, 12)
             
             Group() {
                 VStack(alignment: .leading, spacing: 52) {
-                    //MARK: ENGINE INDICATOR LIGHTS
-                    if engineLights {
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("RESSOURCE STATUS").font(.system(.subheadline, design: .monospaced)).bold()
-                            Divider()
-                            IndicatorView.Static(status: data.vessel.lowFuelWarning, label: "FUEL LOW", trueLight: .red, falseLight: .gray)
-                            IndicatorView.Blinking(status: data.vessel.lowFuelWarning, label: "FUEL LOW", trueLight: .red, falseLight: .gray)
-                            //IndicatorView(status: true, label: "ENGINE", trueLight: .yellow, falseLight: .gray)
-                            }.padding().background(RoundedBackground())
-                    }
                     
                     //MARK: WARNING LIGHTS
                     if warningLights {
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("WARNING LIGHTS").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("panels.indicators.warnings.label.upper").font(.system(.subheadline, design: .monospaced)).bold()
                             Divider()
-                            IndicatorView.Blinking(status: data.vessel.lowFuelWarning, label: "FUEL LOW", trueLight: .red, falseLight: .gray)
-                            IndicatorView.Blinking(status: false, label: "FLAME OUT", trueLight: .red, falseLight: .gray)
-                            IndicatorView.Static(status: false, label: "TEMP HIGH", trueLight: .red, falseLight: .gray)
-                            IndicatorView.Blinking(status: data.vessel.lowAltitudeWarning, label: "ALT LOW", trueLight: .red, falseLight: .gray)
+                            IndicatorView.Blinking(status: data.vessel.lowFuelWarning, label: "panels.indicators.warnings.fuelLow.label", trueLight: .red, falseLight: .gray)
+                            IndicatorView.Blinking(status: false, label: "panels.indicators.warnings.flameOut.label", trueLight: .red, falseLight: .gray)
+                            IndicatorView.Static(status: false, label: "panels.indicators.warnings.tempHigh.label", trueLight: .red, falseLight: .gray)
+                            IndicatorView.Blinking(status: data.vessel.lowAltitudeWarning, label: "panels.indicators.warnings.altLow.label", trueLight: .red, falseLight: .gray)
+                        }.padding().background(RoundedBackground())
+                    }
+                    
+                    //MARK: ENGINE INDICATOR LIGHTS
+                    if engineLights {
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("panels.indicators.engine.label.upper").font(.system(.subheadline, design: .monospaced)).bold()
+                            Divider()
+                            Text("Coming Soon")
+                            IndicatorView.Static(status: false, label: "Coming Soon", trueLight: .yellow, falseLight: .gray)
                         }.padding().background(RoundedBackground())
                     }
                     
                     //MARK: INFO LIGHTS
                     if infoLights {
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("INFO LIGHTS").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("panels.indicators.infos.label.upper").font(.system(.subheadline, design: .monospaced)).bold()
                             Divider()
-                            IndicatorView.Static(status: data.vessel.light, label: "LIGHT", trueLight: .yellow, falseLight: .gray)
-                            IndicatorView.Static(status: data.vessel.gear, label: "GEAR", trueLight: .yellow, falseLight: .gray)
-                            IndicatorView.Static(status: data.vessel.brake, label: "BRAKES", trueLight: .yellow, falseLight: .gray)
+                            IndicatorView.Static(status: data.vessel.light, label: "panels.indicators.infos.light.label", trueLight: .yellow, falseLight: .gray)
+                            IndicatorView.Static(status: data.vessel.gear, label: "panels.indicators.infos.gear.label", trueLight: .yellow, falseLight: .gray)
+                            IndicatorView.Static(status: data.vessel.brake, label: "panels.indicators.infos.breaks.label", trueLight: .yellow, falseLight: .gray)
                         }.padding().background(RoundedBackground())
                     }
                 }

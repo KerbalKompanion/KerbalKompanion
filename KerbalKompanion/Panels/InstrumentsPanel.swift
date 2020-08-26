@@ -28,7 +28,7 @@ struct InstrumentsPanel: View {
                     }
                 } ) {
                     HStack {
-                        Text("INSTRUMENTS")
+                        Text("panels.instruments.headline")
                         Image(systemName: "chevron.right.circle.fill")
                             .rotationEffect(.degrees(self.showPanelOptions ? 90 : 0))
                             .font(.system(.headline, design: .monospaced))
@@ -37,7 +37,7 @@ struct InstrumentsPanel: View {
                 if self.showPanelOptions {
                     Divider()
                     VStack(alignment: .leading) {
-                        PanelOptionButton(status: $flightDisplayPane, label: "ATTITUDE INDICATOR")
+                        PanelOptionButton(status: $flightDisplayPane, label: "panels.instruments.attInd.label")
                     }.accentColor(.primary).padding([.leading, .trailing, .bottom])
                 }
             }.frame(width: 250).background(RoundedBackground(isInner: self.showPanelOptions)).padding([.leading, .trailing, .bottom], 22).padding(.top, 12)
@@ -52,7 +52,7 @@ struct InstrumentsPanel: View {
                                 frame: CGSize(width: 250, height: 250),
                                 style: .small
                             ).clipShape(Circle()).frame(width: 220, height: 220)
-                            Gauge(label: "G-Force", value: self.data.environment.geeforce, max: 15, error: 0.6)
+                            Gauge(label: "panels.instruments.gForce.label", value: self.data.environment.geeforce, max: 15, error: 0.6)
                         }.padding().frame(width: 250).background(RoundedBackground())
                             
                             

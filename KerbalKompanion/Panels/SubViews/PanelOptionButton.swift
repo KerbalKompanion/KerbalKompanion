@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PanelOptionButton: View {
     @Binding var status: Bool
-    var label: String
+    var label: LocalizedStringKey
     var body: some View {
         Button(action: { self.status.toggle() }) {
             HStack {

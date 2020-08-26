@@ -51,8 +51,8 @@ struct SettingsDetail: View {
                 VStack() {
                     HStack() {
                         VStack(alignment: .leading) {
-                            Text("IP ADRESS").font(.system(.subheadline, design: .monospaced)).bold()
-                            Text("The adress of the pc running KSP").font(.system(.caption, design: .monospaced)).bold()
+                            Text("pref.connection.ip.label").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("pref.connection.ip.descr").font(.system(.caption, design: .monospaced)).bold()
                         }
                         Spacer()
                         TextField("255.255.255.255", text: self.$ipAdress)
@@ -64,8 +64,8 @@ struct SettingsDetail: View {
                     
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("PORT NUMBER").font(.system(.subheadline, design: .monospaced)).bold()
-                            Text("Standard is 8085").font(.system(.caption, design: .monospaced)).bold()
+                            Text("pref.connection.port.label").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("pref.connection.port.descr").font(.system(.caption, design: .monospaced)).bold()
                         }
                         Spacer()
                         TextField("8085", text: self.$port).keyboardType(.numberPad)
@@ -77,8 +77,8 @@ struct SettingsDetail: View {
                     
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("REFRESH RATE").font(.system(.subheadline, design: .monospaced)).bold()
-                            Text("Rate at which data is transmitted").font(.system(.caption, design: .monospaced)).bold()
+                            Text("pref.connection.refreshRate.label").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("pref.connection.refreshRate.descr").font(.system(.caption, design: .monospaced)).bold()
                         }
                         Spacer()
                         TextField("500", text: self.$rate).keyboardType(.numberPad)
@@ -93,7 +93,7 @@ struct SettingsDetail: View {
                     }) {
                         HStack {
                             Spacer()
-                            Text("SAVE").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("actions.save").font(.system(.subheadline, design: .monospaced)).bold()
                             Spacer()
                         }.padding().background(RoundedBackground())
                     }.buttonStyle(NMButton(isActive: false))
@@ -142,7 +142,7 @@ struct SettingsDetail: View {
                     }) {
                         HStack {
                             Spacer()
-                            Text("SAVE").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("actions.save").font(.system(.subheadline, design: .monospaced)).bold()
                             Spacer()
                         }.padding().background(RoundedBackground())
                     }.buttonStyle(NMButton(isActive: false))
@@ -198,22 +198,13 @@ struct SettingsDetail: View {
                     HStack {
                         Image(systemName: "globe").imageScale(.large)
                         VStack(alignment: .leading) {
-                            Text("About the Developer").font(.system(.subheadline, design: .monospaced)).bold()
-                            Text("Website").font(.system(.caption, design: .monospaced)).bold()
+                            Text("pref.about.website.label").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("pref.about.website.descr").font(.system(.caption, design: .monospaced)).bold()
                         }
                         Spacer()
                         Image(systemName: "chevron.compact.right").imageScale(.large)
                     }.padding().background(RoundedBackground()).padding([.leading, .trailing, .top], 22)
                     
-                    HStack {
-                        Image(systemName: "globe").imageScale(.large)
-                        VStack(alignment: .leading) {
-                            Text("DARK MODE").font(.system(.subheadline, design: .monospaced)).bold()
-                            Text("Choose you preference").font(.system(.caption, design: .monospaced)).bold()
-                        }
-                        Spacer()
-                        Image(systemName: "chevron.compact.right").imageScale(.large)
-                    }.padding().background(RoundedBackground()).padding([.leading, .trailing, .top], 22)
                     Spacer()
                 }
             }.frame(width: 600)

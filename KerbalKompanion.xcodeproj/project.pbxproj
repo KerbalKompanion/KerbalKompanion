@@ -66,6 +66,7 @@
 		FD0F2A6824F2DAC600A7FAB2 /* KerbalKompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerbalKompanionUITests.swift; sourceTree = "<group>"; };
 		FD0F2A6A24F2DAC600A7FAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD3888372424E60C0006EA4B /* Gauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gauge.swift; sourceTree = "<group>"; };
+		FD43872A24F3EB5200EE89DC /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FD51BFF7241D37D800E1C3B4 /* RessourcePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessourcePanel.swift; sourceTree = "<group>"; };
 		FD51BFF9241D381A00E1C3B4 /* RessourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RessourceView.swift; sourceTree = "<group>"; };
 		FD51BFFB241D3F3800E1C3B4 /* OtherPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPanel.swift; sourceTree = "<group>"; };
@@ -477,6 +478,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FD01123624F30C030048FD61 /* en */,
+				FD43872A24F3EB5200EE89DC /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -587,7 +589,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -645,7 +647,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

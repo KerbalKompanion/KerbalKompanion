@@ -11,7 +11,7 @@ import SwiftUI
 class IndicatorView {
     struct Blinking: View {
         var status:Bool
-        var label: String
+        var label: LocalizedStringKey
         var trueLight: Color
         var falseLight: Color
         @State var blinkingToggle: Bool = false
@@ -35,7 +35,7 @@ class IndicatorView {
 
     struct Static: View {
         var status:Bool
-        var label: String
+        var label: LocalizedStringKey
         var trueLight: Color
         var falseLight: Color
 

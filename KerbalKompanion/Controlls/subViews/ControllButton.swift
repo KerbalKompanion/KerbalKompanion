@@ -13,19 +13,19 @@ struct ControllButton: View {
     @EnvironmentObject var telemachus: TelemachusClient
     var ag: TelemachusClient.Command.Key
     
-    var label: (short: String, label: String) {
+    var label: (short: String, label: LocalizedStringKey) {
         switch self.ag {
-            case .actionGroup01: return (short: "01", label: "ACTION GROUP")
-            case .actionGroup02: return (short: "02", label: "ACTION GROUP")
-            case .actionGroup03: return (short: "03", label: "ACTION GROUP")
-            case .actionGroup04: return (short: "04", label: "ACTION GROUP")
-            case .actionGroup05: return (short: "05", label: "ACTION GROUP")
-            case .actionGroup06: return (short: "06", label: "ACTION GROUP")
-            case .actionGroup07: return (short: "07", label: "ACTION GROUP")
-            case .actionGroup08: return (short: "08", label: "ACTION GROUP")
-            case .actionGroup09: return (short: "09", label: "ACTION GROUP")
-            case .actionGroup10: return (short: "10", label: "ACTION GROUP")
-            case .abort: return (short: "ABORT", label: "")
+            case .actionGroup01: return (short: "01", label: "controlls.actionGroup.label")
+            case .actionGroup02: return (short: "02", label: "controlls.actionGroup.label")
+            case .actionGroup03: return (short: "03", label: "controlls.actionGroup.label")
+            case .actionGroup04: return (short: "04", label: "controlls.actionGroup.label")
+            case .actionGroup05: return (short: "05", label: "controlls.actionGroup.label")
+            case .actionGroup06: return (short: "06", label: "controlls.actionGroup.label")
+            case .actionGroup07: return (short: "07", label: "controlls.actionGroup.label")
+            case .actionGroup08: return (short: "08", label: "controlls.actionGroup.label")
+            case .actionGroup09: return (short: "09", label: "controlls.actionGroup.label")
+            case .actionGroup10: return (short: "10", label: "controlls.actionGroup.label")
+            case .abort: return (short: "controlls.abort.label", label: "")
             
             default: return (short: "ERR", label: "ERROR")
         }
