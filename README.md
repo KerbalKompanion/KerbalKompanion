@@ -18,7 +18,6 @@
 </p>
 > KerbalKompanion is an iPad App that works in Tandem with the Telemachus-Mod for Kerbal Space Program.
 
-### 🏠 [Homepage](https://noahkamara.github.io/KerbalKompanion/)
 
 ## Author
 
