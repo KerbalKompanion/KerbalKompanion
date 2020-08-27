@@ -4,13 +4,13 @@
     <img alt="latest stable" src="https://img.shields.io/github/v/release/KerbalKompanion/KerbalKompanion?label=stable">
   </a>
   <a href="https://github.com/KerbalKompanion/KerbalKompanion/releases/latest">
-    <img alt="latest version" src="https://img.shields.io/github/v/release/KerbalKompanion/TelemachusKit?label=TelemachusKit">
+    <img alt="latest version" src="https://img.shields.io/github/v/release/KerbalKompanion/KerbalKompanion?include_prereleaseslabel=pre">
   </a>
   <a href="https://github.com/KerbalKompanion/KerbalKompanion/master/LICENSE">
     <img src="https://img.shields.io/github/license/KerbalKompanion/KerbalKompanion" />
   </a>
   <a href="https://github.com/KerbalKompanion/TelemachusKit/releases/latest">
-    <img alt="latest version" src="https://img.shields.io/github/v/release/KerbalKompanion/TelemachusKit?include_prereleases&label=pre">
+    <img alt="latest version" src="https://img.shields.io/github/v/release/KerbalKompanion/TelemachusKit&label=TelemachusKit">
   </a>
   <a href="https://github.com/TeleIO/Telemachus-1/releases/tag/v1.7.0-reborn-gyrfalcon">
     <img alt="latest version" src="https://img.shields.io/github/v/release/TeleIO/Telemachus-1?label=Telemachus">
