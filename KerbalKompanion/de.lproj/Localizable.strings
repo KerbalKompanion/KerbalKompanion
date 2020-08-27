@@ -1,149 +1,149 @@
-///*
-// Localizable.strings
-// KerbalKompanion
-//
-// Created by Noah Kamara on 23.08.20.
-// Copyright © 2020 Noah Kamara. All rights reserved.
-// */
-//
-//// General
-//"general.error" = "Error";
-//
-//// Actions / Button Labels
-//"actions.save" = "Speichern";
-//"actions.showDetail" = "Details";
-//
-//
-//
-//// GAME STATUS
-//"gameStatus" = "SPIEL STATUS";
-//"gameStatus.inFlight" = "IN FLUG";
-//"gameStatus.noVessel" = "KEIN FLUGZEUG";
-//"gameStatus.paused" = "PAUSIERT";
-//"gameStatus.noPower" = "KEINE ENERGIE";
-//"gameStatus.disabled" = "AUSGESCHALTET";
-//"gameStatus.notFound" = "NICHT GEFUNDEN";
-//"gameStatus.error" = "FEHLER";
-//
-//
-//
-//// CONNECTION STATUS
-//"connStat.connected" = "VERBUNDEN";
-//"connStat.disconnected" = "NICHT VERBUNDEN";
-//
-//
-//
-//// PREFERENCES VIEW
-/////     Menu
-//"pref.connection" = "Verbindung";
-//"pref.appearance" = "Aussehen";
-//"pref.betaFeatures" = "Beta Feature";
-//"pref.about" = "Über";
-//
-/////     Connection
-//"pref.connection.ip.label" = "IP Addresse";
-//"pref.connection.ip.descr" = "Die Adresse des PC's auf dem KSP läuft";
-//"pref.connection.port.label" = "Port Nummer";
-//"pref.connection.port.descr" = "Der Standard-Port ist 8085";
-//
-//"pref.connection.refreshRate.label" = "Aktualisierungsrate";
-//"pref.connection.refreshRate.descr" = "Die Rate mit der die Daten aktualisiert werden";
-//
-/////     Appearance
-//"pref.appearance.darkMode" = "Dunkel Modus";
-//"pref.appearance.lightMode" = "Heller Modus";
-//"pref.appearance.darkMode.descr" = "";
-//
-/////     About
-//"pref.about.website.label" = "Über den Entwickler";
-//"pref.about.website.descr" = "Website";
-//
-//
-//
-//// TOP PANEL
-//"toppanel.prefButton.label" = "EINSTELLUNGEN";
-//"toppanel.heightFromTerrain.label" = "HÖHE Ü. TERRAIN";
-//"toppanel.altitude.label" = "HÖHE Ü NN";
-//"toppanel.vertSpeed.label" = "VERT GESCHW (m/s)";
-//"toppanel.surfSpeed.label" = "SURF GESCHW (m/s)";
-//"toppanel.heading.label" = "HDG °";
-//"toppanel.pitch.label" = "PITCH (°)";
-//
-//
-//
-//// PANELS
-//"panels.instruments.headline" = "INSTRUMENTE";
-//"panels.instruments.attInd.label" = "Einstellungsanzeige";
-//"panels.instruments.gForce.label" = "G-Kraft";
-//
-//"panels.other.headline" = "ANDERE";
-//"panels.other.loc.label" = "Standort";
-//"panels.other.loc.label.upper" = "STANDORT";
-//"panels.other.loc.latitude.label" = "B-GRAD";
-//"panels.other.loc.longitude.label" = "L-GRAD";
-//"panels.other.loc.altitude.label" = "HÖHE";
-//
-//
-//"panels.other.env.label" = "Umgebung";
-//"panels.other.env.label.upper" = "UMGEBUNG";
-//"panels.other.env.terrainHeight.label" = "Terrain";
-//"panels.other.env.atmDens.label" = "Atm. Dichte";
-//"panels.other.env.gForce.label" = "G-Kraft";
-//
-//"panels.other.target.label" = "Ziel";
-//"panels.other.target.noTarget.label" = "Kein Ziel";
-//"panels.other.target.label.upper" = "ZIEL INFO";
-//"panels.other.target.distance.label" = "Entfernung";
-//"panels.other.target.velocity.label" = "Geschwindigkeit";
-//"panels.other.target.relVelocity.label" = "Rel. Geschwindigkeit";
-//
-//"panels.ressources.label" = "RESSOURCEN";
-//"panels.ressources.overview.label" = "Übersicht";
-//"panels.ressources.liquid.label" = "Flüssig";
-//"panels.ressources.liquid.label.long" = "Flüssigtreibstoff";
-//"panels.ressources.liquid.label.short" = "LQD";
-//"panels.ressources.electric.label" = "Elektrisch";
-//"panels.ressources.electric.label.long" = "Elektrische Ladung";
-//"panels.ressources.electric.label.short" = " EC";
-//"panels.ressources.intakeAir.label" = "Luft";
-//"panels.ressources.intakeAir.label.long" = "Luftzufuhr";
-//"panels.ressources.intakeAir.label.short" = " IA";
-//
-//"panels.indicators.label" = "INDIKATOREN";
-//"panels.indicators.warnings.label" = "Warnungen";
-//"panels.indicators.engine.label" = "Motor";
-//"panels.indicators.infos.label" = "Infos";
-//"panels.indicators.ressourceStat.label" = "Ressourcen Status";
-//
-//"panels.indicators.warnings.label.upper" = "WARN LICHTER";
-//"panels.indicators.warnings.fuelLow.label" = "NI TREIBSTOFF";
-//"panels.indicators.warnings.flameOut.label" = "FLAME OUT";
-//"panels.indicators.warnings.tempHigh.label" = "HO TEMP";
-//"panels.indicators.warnings.altLow.label" = "NI HÖHE";
-//
-//"panels.indicators.engine.label.upper" = "Motor";
-//
-//"panels.indicators.infos.label.upper" = "INFO LICHTER";
-//"panels.indicators.infos.light.label" = "LICHT";
-//"panels.indicators.infos.gear.label" = "FAHRWERK";
-//"panels.indicators.infos.breaks.label" = "BREMSEN";
-//
-//
-//// CONTROLLS
-//"controlls.actionGroups.label"= "Aktionsgruppen";
-//"controlls.actionGroup.label" = "AKTIONSGRUPPE";
-//"controlls.abort.label" = "ABBRECHEN";
-//
-//"controlls.toggles.label" = "Fahrzeug Systeme";
-//"controlls.toggles.toggleBrake.label" = "BREMSE UMSCHALTEN";
-//"controlls.toggles.toggleBrake.label.short" = "BREMSE";
-//"controlls.toggles.toggleGears.label" = "FAHRWERK UMSCHALTEN";
-//"controlls.toggles.toggleGears.label.short" = "FAHRWERK";
-//"controlls.toggles.toggleLight.label" = " LICHT UMSCHALTEN  ";
-//"controlls.toggles.toggleLight.label.short" = "LICHT";
-//"controlls.toggles.toggleRCS.label" =   "  RCS UMSCHALTEN   ";
-//"controlls.toggles.toggleRCS.label.short" = " RCS ";
-//"controlls.toggles.toggleSAS.label" = "  SAS UMSCHALTEN   ";
-//"controlls.toggles.toggleSAS.label.short" = " SAS ";
-//"controlls.toggles.toggleAbort.label" = "ABORT UMSCHALTEN";
-//"controlls.toggles.toggleAbort.label.short" = "Abort";
+/*
+ Localizable.strings
+ KerbalKompanion
+
+ Created by Noah Kamara on 23.08.20.
+ Copyright © 2020 Noah Kamara. All rights reserved.
+ */
+
+// General
+"general.error" = "Error";
+
+// Actions / Button Labels
+"actions.save" = "Speichern";
+"actions.showDetail" = "Details";
+
+
+
+// GAME STATUS
+"gameStatus" = "SPIEL STATUS";
+"gameStatus.inFlight" = "IN FLUG";
+"gameStatus.noVessel" = "KEIN FLUGZEUG";
+"gameStatus.paused" = "PAUSIERT";
+"gameStatus.noPower" = "KEINE ENERGIE";
+"gameStatus.disabled" = "AUSGESCHALTET";
+"gameStatus.notFound" = "NICHT GEFUNDEN";
+"gameStatus.error" = "FEHLER";
+
+
+
+// CONNECTION STATUS
+"connStat.connected" = "VERBUNDEN";
+"connStat.disconnected" = "NICHT VERBUNDEN";
+
+
+
+// PREFERENCES VIEW
+///     Menu
+"pref.connection" = "Verbindung";
+"pref.appearance" = "Aussehen";
+"pref.betaFeatures" = "Beta Feature";
+"pref.about" = "Über";
+
+///     Connection
+"pref.connection.ip.label" = "IP Addresse";
+"pref.connection.ip.descr" = "Die Adresse des PC's auf dem KSP läuft";
+"pref.connection.port.label" = "Port Nummer";
+"pref.connection.port.descr" = "Der Standard-Port ist 8085";
+
+"pref.connection.refreshRate.label" = "Aktualisierungsrate";
+"pref.connection.refreshRate.descr" = "Die Rate mit der die Daten aktualisiert werden";
+
+///     Appearance
+"pref.appearance.darkMode" = "Dunkel Modus";
+"pref.appearance.lightMode" = "Heller Modus";
+"pref.appearance.darkMode.descr" = "";
+
+///     About
+"pref.about.website.label" = "Über den Entwickler";
+"pref.about.website.descr" = "Website";
+
+
+
+// TOP PANEL
+"toppanel.prefButton.label" = "EINSTELLUNGEN";
+"toppanel.heightFromTerrain.label" = "HÖHE Ü. TERRAIN";
+"toppanel.altitude.label" = "HÖHE Ü NN";
+"toppanel.vertSpeed.label" = "VERT GESCHW (m/s)";
+"toppanel.surfSpeed.label" = "SURF GESCHW (m/s)";
+"toppanel.heading.label" = "HDG °";
+"toppanel.pitch.label" = "PITCH (°)";
+
+
+
+// PANELS
+"panels.instruments.headline" = "INSTRUMENTE";
+"panels.instruments.attInd.label" = "Einstellungsanzeige";
+"panels.instruments.gForce.label" = "G-Kraft";
+
+"panels.other.headline" = "ANDERE";
+"panels.other.loc.label" = "Standort";
+"panels.other.loc.label.upper" = "STANDORT";
+"panels.other.loc.latitude.label" = "B-GRAD";
+"panels.other.loc.longitude.label" = "L-GRAD";
+"panels.other.loc.altitude.label" = "HÖHE";
+
+
+"panels.other.env.label" = "Umgebung";
+"panels.other.env.label.upper" = "UMGEBUNG";
+"panels.other.env.terrainHeight.label" = "Terrain";
+"panels.other.env.atmDens.label" = "Atm. Dichte";
+"panels.other.env.gForce.label" = "G-Kraft";
+
+"panels.other.target.label" = "Ziel";
+"panels.other.target.noTarget.label" = "Kein Ziel";
+"panels.other.target.label.upper" = "ZIEL INFO";
+"panels.other.target.distance.label" = "Entfernung";
+"panels.other.target.velocity.label" = "Geschwindigkeit";
+"panels.other.target.relVelocity.label" = "Rel. Geschwindigkeit";
+
+"panels.ressources.label" = "RESSOURCEN";
+"panels.ressources.overview.label" = "Übersicht";
+"panels.ressources.liquid.label" = "Flüssig";
+"panels.ressources.liquid.label.long" = "Flüssigtreibstoff";
+"panels.ressources.liquid.label.short" = "LQD";
+"panels.ressources.electric.label" = "Elektrisch";
+"panels.ressources.electric.label.long" = "Elektrische Ladung";
+"panels.ressources.electric.label.short" = " EC";
+"panels.ressources.intakeAir.label" = "Luft";
+"panels.ressources.intakeAir.label.long" = "Luftzufuhr";
+"panels.ressources.intakeAir.label.short" = " IA";
+
+"panels.indicators.label" = "INDIKATOREN";
+"panels.indicators.warnings.label" = "Warnungen";
+"panels.indicators.engine.label" = "Motor";
+"panels.indicators.infos.label" = "Infos";
+"panels.indicators.ressourceStat.label" = "Ressourcen Status";
+
+"panels.indicators.warnings.label.upper" = "WARN LICHTER";
+"panels.indicators.warnings.fuelLow.label" = "NI TREIBSTOFF";
+"panels.indicators.warnings.flameOut.label" = "FLAME OUT";
+"panels.indicators.warnings.tempHigh.label" = "HO TEMP";
+"panels.indicators.warnings.altLow.label" = "NI HÖHE";
+
+"panels.indicators.engine.label.upper" = "Motor";
+
+"panels.indicators.infos.label.upper" = "INFO LICHTER";
+"panels.indicators.infos.light.label" = "LICHT";
+"panels.indicators.infos.gear.label" = "FAHRWERK";
+"panels.indicators.infos.breaks.label" = "BREMSEN";
+
+
+// CONTROLLS
+"controlls.actionGroups.label"= "Aktionsgruppen";
+"controlls.actionGroup.label" = "AKTIONSGRUPPE";
+"controlls.abort.label" = "ABBRECHEN";
+
+"controlls.toggles.label" = "Fahrzeug Systeme";
+"controlls.toggles.toggleBrake.label" = "BREMSE UMSCHALTEN";
+"controlls.toggles.toggleBrake.label.short" = "BREMSE";
+"controlls.toggles.toggleGears.label" = "FAHRWERK UMSCHALTEN";
+"controlls.toggles.toggleGears.label.short" = "FAHRWERK";
+"controlls.toggles.toggleLight.label" = " LICHT UMSCHALTEN  ";
+"controlls.toggles.toggleLight.label.short" = "LICHT";
+"controlls.toggles.toggleRCS.label" =   "  RCS UMSCHALTEN   ";
+"controlls.toggles.toggleRCS.label.short" = " RCS ";
+"controlls.toggles.toggleSAS.label" = "  SAS UMSCHALTEN   ";
+"controlls.toggles.toggleSAS.label.short" = " SAS ";
+"controlls.toggles.toggleAbort.label" = "ABORT UMSCHALTEN";
+"controlls.toggles.toggleAbort.label.short" = "Abort";

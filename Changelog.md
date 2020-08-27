@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Attitude Indicator shows correct roll now (was reversed before)
 - Preferences doesn't show useless settings anymore (will re-add later when they work)
+- exchanged PrimaryFlightDisplay Framework for own for (Swift Package)
 ### Deprecated
 ### Removed
 
