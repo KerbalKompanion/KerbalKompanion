@@ -34,9 +34,9 @@ Give a ⭐️ if this project helped you!
 
 ## 📸 Screenshots
 
-![Panels](https://github.com/KerbalKompanion/KerbalKompanion/blob/master/Assets/Screenshots/Panels/mixed.png)
-![FlightDisplay](https://github.com/KerbalKompanion/KerbalKompanion/blob/master/Assets/Screenshots/Controlls/mixed.png)
-![Controlls](https://github.com/KerbalKompanion/KerbalKompanion/blob/master/Assets/Screenshots/FlightDisplay/mixed.png)
+![Panels](https://github.com/KerbalKompanion/KerbalKompanion/blob/master/Assets/Screenshots/panels.png)
+![FlightDisplay](https://github.com/KerbalKompanion/KerbalKompanion/blob/master/Assets/Screenshots/controlls.png)
+![Controlls](https://github.com/KerbalKompanion/KerbalKompanion/blob/master/Assets/Screenshots/flightdisplay.png)
 
 
 ## 📝 License
