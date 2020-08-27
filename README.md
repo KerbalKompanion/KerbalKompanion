@@ -32,6 +32,13 @@
 Give a ⭐️ if this project helped you!
 
 
+## 📸 Screenshots
+
+![Panels](https://github.com/KerbalKompanion/TelemachusKit/blob/master/Screenshots/Panels/mixed.png)
+![FlightDisplay](https://github.com/KerbalKompanion/TelemachusKit/blob/master/Screenshots/Controlls/mixed.png)
+![Controlls](https://github.com/KerbalKompanion/TelemachusKit/blob/master/Screenshots/FlightDisplay/mixed.png)
+
+
 ## 📝 License
 
 Copyright © 2020 [Noah Kamara](https://github.com/noahkamara).
