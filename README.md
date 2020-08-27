@@ -4,7 +4,7 @@
     <img alt="latest stable" src="https://img.shields.io/github/v/release/KerbalKompanion/KerbalKompanion?label=stable">
   </a>
   <a href="https://github.com/KerbalKompanion/KerbalKompanion/releases/latest">
-    <img alt="latest version" src="https://img.shields.io/github/v/release/KerbalKompanion/KerbalKompanion?include_prereleaseslabel=pre">
+    <img alt="latest version" src="https://img.shields.io/github/v/release/KerbalKompanion/KerbalKompanion?include_prereleases&label=pre">
   </a>
   <a href="https://github.com/KerbalKompanion/KerbalKompanion/master/LICENSE">
     <img src="https://img.shields.io/github/license/KerbalKompanion/KerbalKompanion" />
