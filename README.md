@@ -4,7 +4,7 @@
     <img alt="latest stable" src="https://img.shields.io/github/v/release/KerbalKompanion/KerbalKompanion?label=stable">
   </a>
   <a href="https://github.com/KerbalKompanion/KerbalKompanion/releases/latest">
-    <img alt="latest version" src="https://img.shields.io/github/v/release/KerbalKompanion/KerbalKompanion?include_prereleases&label=pre">
+    <img alt="latest version" src="https://img.shields.io/github/v/release/KerbalKompanion/KerbalKompanion?label=TelemachusKit">
   </a>
   <a href="https://github.com/KerbalKompanion/KerbalKompanion/master/LICENSE">
     <img src="https://img.shields.io/github/license/KerbalKompanion/KerbalKompanion" />
@@ -13,7 +13,7 @@
     <img alt="latest version" src="https://img.shields.io/github/v/release/KerbalKompanion/TelemachusKit?include_prereleases&label=pre">
   </a>
   <a href="https://github.com/TeleIO/Telemachus-1/releases/tag/v1.7.0-reborn-gyrfalcon">
-    <img src="https://img.shields.io/badge/Telemachus-v1.7.0--reborn--gyrfalcon-brightgreen" />
+    <img alt="latest version" src="https://img.shields.io/github/v/release/TeleIO/Telemachus-1?label=Telemachus">
   </a>
 </p>
 > KerbalKompanion is an iPad App that works in Tandem with the Telemachus-Mod for Kerbal Space Program.
