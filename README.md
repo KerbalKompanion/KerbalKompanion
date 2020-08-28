@@ -22,7 +22,7 @@
     <img alt="App Store" src="https://github.com/KerbalKompanion/KerbalKompanion/blob/master/Assets/app_icon_rounded.png">
   </a>
   <a href="https://testflight.apple.com/join/M8FOvS3k">
-    <img alt="TestFlight" src="https://testflight.apple.com/images/testflight-128x128_2x_27.png">
+    <img alt="TestFlight" src="https://testflight.apple.com/images/testflight-128x128.png">
   </a>
 </p>
 > KerbalKompanion is an iPad App that works in Tandem with the Telemachus-Mod for Kerbal Space Program.
