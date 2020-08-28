@@ -7,11 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v0.0.2.build.3] - 2020-08-28
 ### Added
 - Dark Scheme for Attitude Indicator
-- Localization for DE
+- Added Beta Feature Flags
+    - Attitude Indicator Dark Mode Support
+    - Advanced Mode (Rate)
 ### Changed
-- Updated TelemachusKit to 1.0.0-beta.1
-- Preferences doesn't show useless settings anymore (will re-add later when they work)
-- exchanged PrimaryFlightDisplay Framework for own for (Swift Package)
+- Refresh Rate setting will now only appear in "Advanced Mode"
 ### Deprecated
 ### Removed
 
