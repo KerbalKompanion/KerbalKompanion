@@ -18,6 +18,8 @@ class SettingsStore: ObservableObject {
         static let port = "port_number"
         static let rate = "refresh_rate"
         static let darkModePreference = "dark_mode_preference"
+        static let isAdvancedModeEnabled = "advanced_mode_enabled"
+        static let isAttitudeIndicatorSchemeEnabled = "ai_scheme_enabled"
     }
     private let defaults: UserDefaults
     let objectWillChange = ObservableObjectPublisher()
@@ -28,7 +30,10 @@ class SettingsStore: ObservableObject {
         defaults.register(defaults: [
             Keys.showOnboarding: true,
             Keys.ip: "0.0.0.0",
-            Keys.port: 8085
+            Keys.port: 8085,
+            Keys.rate: 250,
+            Keys.isAdvancedModeEnabled: false,
+            Keys.isAttitudeIndicatorSchemeEnabled: false
             ])
     }
     
@@ -67,10 +72,34 @@ class SettingsStore: ObservableObject {
         get {
             return defaults.string(forKey: Keys.darkModePreference)
             .flatMap { DarkModePreference(rawValue: $0) } ?? .system
+
         }
 
         set {
             defaults.set(newValue.rawValue, forKey: Keys.darkModePreference)
+            objectWillChange.send()
+        }
+    }
+    
+    var beta_isAdvancedModeEnabled: Bool {
+        get {
+            return defaults.bool(forKey: Keys.isAdvancedModeEnabled)
+        }
+        
+        set {
+            defaults.set(newValue, forKey: Keys.isAdvancedModeEnabled)
+            objectWillChange.send()
+        }
+    }
+    
+    var beta_isAttitudeIndicatorSchemeEnabled: Bool {
+        get {
+            return defaults.bool(forKey: Keys.isAttitudeIndicatorSchemeEnabled)
+        }
+        
+        set {
+            defaults.set(newValue, forKey: Keys.isAttitudeIndicatorSchemeEnabled)
+            objectWillChange.send()
         }
     }
     

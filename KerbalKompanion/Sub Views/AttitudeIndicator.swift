@@ -13,6 +13,7 @@ import PrimaryFlightDisplay
 
 
 struct AttitudeIndicator: UIViewRepresentable {
+    @EnvironmentObject var settings: SettingsStore
     @Binding var data: TelemachusData
     var frame: CGSize
     var style: Style
@@ -29,7 +30,12 @@ struct AttitudeIndicator: UIViewRepresentable {
             config.altimeter.size.width = 0
             config.headingIndicator.size.height = 0
             
-            config.horizon.groundColor = SKColor.brown
+            if self.settings.beta_isAttitudeIndicatorSchemeEnabled {
+                config.horizon.groundColor = SKColor(named: "ai_ground")!
+                config.horizon.skyColor = SKColor(named: "ai_sky")!
+            } else {
+                config.horizon.groundColor = SKColor.brown
+            }
             config.horizon.zeroPitchLineColor = SKColor.purple
             
             config.pitchLadder.magnitudeDisplayDegree = 0
@@ -45,7 +51,12 @@ struct AttitudeIndicator: UIViewRepresentable {
         case .fullScreen:
             var config = PrimaryFlightDisplay.DefaultSettings()
             config.bankIndicator.arcMaximumDisplayDegree = 75
-            config.horizon.groundColor = SKColor.brown
+            if self.settings.beta_isAttitudeIndicatorSchemeEnabled {
+                config.horizon.groundColor = SKColor(named: "ai_ground")!
+                config.horizon.skyColor = SKColor(named: "ai_sky")!
+            } else {
+                config.horizon.groundColor = SKColor.brown
+            }
             return config
         }
     }

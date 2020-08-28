@@ -22,7 +22,10 @@ struct SettingsDetail: View {
         switch selectedView {
             case .connection: return AnyView(Connection().environmentObject(self.telemachus).environmentObject(self.settings))
             case .appearance: return AnyView(Appearence().environmentObject(self.telemachus).environmentObject(self.settings))
-            case .betaFeatures: return AnyView(BetaFeatures().environmentObject(self.telemachus).environmentObject(self.settings))
+            case .betaFeatures:
+                return AnyView(BetaFeatures()
+                    .environmentObject(self.telemachus)
+                    .environmentObject(self.settings))
             case .about: return AnyView(About().environmentObject(self.telemachus).environmentObject(self.settings))
 //            default: return AnyView(Text("hi"))
         }
@@ -75,18 +78,20 @@ struct SettingsDetail: View {
                             .frame(width: 200)
                     }.padding().background(RoundedBackground()).padding([.leading, .trailing, .top], 22)
                     
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text("pref.connection.refreshRate.label").font(.system(.subheadline, design: .monospaced)).bold()
-                            Text("pref.connection.refreshRate.descr").font(.system(.caption, design: .monospaced)).bold()
-                        }
-                        Spacer()
-                        TextField("500", text: self.$rate).keyboardType(.numberPad)
-                            .font(.system(.callout, design: .monospaced))
-                            .padding(10)
-                            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(CS.shadow_dark))
-                            .frame(width: 200)
-                    }.padding().background(RoundedBackground()).padding([.leading, .trailing, .top], 22)
+                    if self.settings.beta_isAdvancedModeEnabled {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("pref.connection.refreshRate.label").font(.system(.subheadline, design: .monospaced)).bold()
+                                Text("pref.connection.refreshRate.descr").font(.system(.caption, design: .monospaced)).bold()
+                            }
+                            Spacer()
+                            TextField("500", text: self.$rate).keyboardType(.numberPad)
+                                .font(.system(.callout, design: .monospaced))
+                                .padding(10)
+                                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(CS.shadow_dark))
+                                .frame(width: 200)
+                        }.padding().background(RoundedBackground()).padding([.leading, .trailing, .top], 22)
+                    }
                     
                     Button(action: {
                         self.saveSettings()
@@ -155,22 +160,26 @@ struct SettingsDetail: View {
     
     
     struct BetaFeatures: View {
-        @State var toggle: Bool = false
-        var loremIpsum: String = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+        @EnvironmentObject var settings: SettingsStore
+
         var body: some View {
             ScrollView(.vertical, showsIndicators: true) {
-                VStack {
-//                    FeatureItem(label: "Feature A",
-//                                description: self.loremIpsum,
-//                                toggle: self.$toggle)
-                    Text("Coming Soon")
+                VStack() {
+                    FeatureItem(label: "feature.advancedMode.label",
+                                description: "feature.advancedMode.description",
+                                toggle: self.$settings.beta_isAdvancedModeEnabled)
+                    
+                    FeatureItem(label: "feature.attitudeIndicatorDarkMode.label",
+                                description: "feature.attitudeIndicatorDarkMode.description",
+                                toggle: self.$settings.beta_isAttitudeIndicatorSchemeEnabled)
+                    Spacer()
                 }
-            }
+            }.frame(width: 600)
         }
         
         struct FeatureItem: View {
-            var label: String
-            var description: String
+            var label: LocalizedStringKey
+            var description: LocalizedStringKey
             @Binding var toggle: Bool
             var body: some View {
                 Button(action: {
@@ -180,13 +189,15 @@ struct SettingsDetail: View {
                         HStack(alignment: .top) {
                             Image(systemName: self.toggle ? "checkmark.circle.fill" : "circle")
                                 .font(.headline).frame(height: 20)
+                                .padding(.trailing)
                             VStack(alignment: .leading) {
                                 Text(self.label).font(.system(.subheadline, design: .monospaced)).bold().frame(height: 20)
                                 Text(self.description).font(.system(.caption, design: .monospaced)).bold()
                             }
+                            Spacer()
                         }
                     }.padding()
-                }.accentColor(.primary).buttonStyle(NMButton()).padding()
+                }.accentColor(.primary).buttonStyle(NMButton()).padding([.leading, .trailing, .top], 22)
             }
         }
     }

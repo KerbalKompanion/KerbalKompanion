@@ -51,7 +51,10 @@ struct InstrumentsPanel: View {
                                 data: self.$telemachus.data,
                                 frame: CGSize(width: 250, height: 250),
                                 style: .small
-                            ).clipShape(Circle()).frame(width: 220, height: 220)
+                            )
+                            .environmentObject(self.settings)
+                            .clipShape(Circle())
+                            .frame(width: 220, height: 220)
                             Gauge(label: "panels.instruments.gForce.label", value: self.data.environment.geeforce, max: 15, error: 0.6)
                         }.padding().frame(width: 250).background(RoundedBackground())
                             

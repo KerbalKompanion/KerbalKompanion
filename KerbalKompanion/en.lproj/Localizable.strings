@@ -13,7 +13,12 @@
 "actions.save" = "Save";
 "actions.showDetail" = "Details";
 
-
+// Features
+//  BETA
+"feature.advancedMode.label" = "Advanced Mode";
+"feature.advancedMode.description" = "Enables advanced preferences";
+"feature.attitudeIndicatorDarkMode.label" = "Attitude Indicator Dark Mode";
+"feature.attitudeIndicatorDarkMode.description" = "Enables Color scheme switching in Attitude Indicator views";
 
 // GAME STATUS
 "gameStatus" = "game status";
@@ -62,10 +67,10 @@
 
 // TOP PANEL
 "toppanel.prefButton.label" = "PREFERENCES";
-"toppanel.heightFromTerrain.label" = "HEIGHT FROM TERRAIN";
+"toppanel.heightFromTerrain.label" = "RADAR ALTITUDE";
 "toppanel.altitude.label" = "ALTITUDE";
 "toppanel.vertSpeed.label" = "VERT SPD (m/s)";
-"toppanel.surfSpeed.label" = "SURF SPD (m/s)";
+"toppanel.surfSpeed.label" = "GROUND SPD (m/s)";
 "toppanel.heading.label" = "HDG °";
 "toppanel.pitch.label" = "PITCH (°)";
 
@@ -86,7 +91,7 @@
 
 "panels.other.env.label" = "Environment";
 "panels.other.env.label.upper" = "ENVIRONMENT";
-"panels.other.env.terrainHeight.label" = "Terrain";
+"panels.other.env.terrainHeight.label" = "Radar Alt";
 "panels.other.env.atmDens.label" = "Atm. Dens.";
 "panels.other.env.gForce.label" = "G-Force";
 

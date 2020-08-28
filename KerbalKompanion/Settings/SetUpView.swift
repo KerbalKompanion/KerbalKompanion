@@ -19,7 +19,6 @@ struct SetUpView: View {
     @State var rate: String = ""
     
     func testConnection() {
-        print(self.ipAddress, self.port, self.rate)
         self.settings.ip    = self.ipAddress
         self.settings.port  = Int(port) ?? self.settings.port
         self.settings.rate  = Int(rate) ?? self.settings.rate
@@ -67,18 +66,20 @@ struct SetUpView: View {
                         .frame(width: 200)
                 }.padding().background(RoundedBackground()).padding([.leading, .trailing, .top], 22)
                 
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("REFRESH RATE").font(.system(.subheadline, design: .monospaced)).bold()
-                        Text("Rate at which data is transmitted").font(.system(.caption, design: .monospaced)).bold()
-                    }
-                    Spacer()
-                    TextField("500", text: self.$rate).keyboardType(.numberPad)
-                        .font(.system(.callout, design: .monospaced))
-                        .padding(10)
-                        .background(RoundedRectangle(cornerRadius: 10).foregroundColor(CS.shadow_dark))
-                        .frame(width: 200)
-                }.padding().background(RoundedBackground()).padding([.leading, .trailing, .top], 22)
+                if self.settings.beta_isAdvancedModeEnabled {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("REFRESH RATE").font(.system(.subheadline, design: .monospaced)).bold()
+                            Text("Rate at which data is transmitted").font(.system(.caption, design: .monospaced)).bold()
+                        }
+                        Spacer()
+                        TextField("500", text: self.$rate).keyboardType(.numberPad)
+                            .font(.system(.callout, design: .monospaced))
+                            .padding(10)
+                            .background(RoundedRectangle(cornerRadius: 10).foregroundColor(CS.shadow_dark))
+                            .frame(width: 200)
+                    }.padding().background(RoundedBackground()).padding([.leading, .trailing, .top], 22)
+                }
                 
                 Button(action: {
                     self.testConnection()

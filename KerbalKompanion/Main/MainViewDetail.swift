@@ -96,8 +96,11 @@ struct MainViewDetail: View {
                 data: self.$telemachus.data,
                 frame: CGSize(width: 500, height: 500),
                 style: .fullScreen
-            ).clipShape(RoundedRectangle(cornerRadius: 10)).background(RoundedBackground())
-                .padding(.trailing)
+            )
+            .environmentObject(self.settings)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .background(RoundedBackground())
+            .padding(.trailing)
         }
     }
     

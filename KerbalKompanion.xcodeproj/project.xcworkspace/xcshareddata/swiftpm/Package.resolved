@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/KerbalKompanion/PrimaryFlightDisplay",
         "state": {
           "branch": null,
-          "revision": "4436b759f690f4ea8e97e64bf6423a8d32fda0d2",
-          "version": "1.0.0"
+          "revision": "3f46ff78fc54f946505f91faff20b91d003c81ae",
+          "version": "0.7.3"
         }
       },
       {
@@ -39,11 +39,11 @@
       },
       {
         "package": "TelemachusKit",
-        "repositoryURL": "https://github.com/noahkamara/TelemachusKit.git",
+        "repositoryURL": "https://github.com/KerbalKompanion/TelemachusKit.git",
         "state": {
           "branch": null,
-          "revision": "2113fcf0f088b128c91bfa401ee68b878bff2970",
-          "version": "1.0.0-alpha.1"
+          "revision": "ece3a61981ad47f4ecafc18a1a803a487aad685d",
+          "version": "1.0.0-beta.1"
         }
       }
     ]
