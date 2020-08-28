@@ -12,7 +12,7 @@ import TelemachusKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    let telemachusClient = TelemachusClient()
+    let telemachusClient = TelemachusClient(.debug)
     let settings = SettingsStore()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

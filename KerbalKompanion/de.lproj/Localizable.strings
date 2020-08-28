@@ -67,7 +67,7 @@
 
 // TOP PANEL
 "toppanel.prefButton.label" = "PREFERENCES";
-"toppanel.heightFromTerrain.label" = "HEIGHT FROM TERRAIN";
+"toppanel.heightFromTerrain.label" = "RADAR ALTITUDE";
 "toppanel.altitude.label" = "ALTITUDE";
 "toppanel.vertSpeed.label" = "VERT SPD (m/s)";
 "toppanel.surfSpeed.label" = "GROUND SPD (m/s)";
@@ -91,7 +91,7 @@
 
 "panels.other.env.label" = "Environment";
 "panels.other.env.label.upper" = "ENVIRONMENT";
-"panels.other.env.terrainHeight.label" = "Radar Altitude";
+"panels.other.env.terrainHeight.label" = "Radar Alt";
 "panels.other.env.atmDens.label" = "Atm. Dens.";
 "panels.other.env.gForce.label" = "G-Force";
 

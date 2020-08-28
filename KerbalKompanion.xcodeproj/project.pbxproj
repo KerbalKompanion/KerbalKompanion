@@ -55,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15A8C6349625002E8A65313B /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
+		AED49D718F0EF5388FBB4133 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
+		F40034AB980F2DA3A6019FF6 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
 		FD01123224F30BE90048FD61 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		FD01123624F30C030048FD61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FD0F2A5A24F2DAAF00A7FAB2 /* KerbalKompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerbalKompanionTests.swift; sourceTree = "<group>"; };
@@ -118,6 +121,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADE83FCF00E2A9BAEF6C7D2E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EBB62DDE37A1F3468C5DB6F1 /* LaunchScreen */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EBB62DDE37A1F3468C5DB6F1 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				AED49D718F0EF5388FBB4133 /* appstore.png */,
+				15A8C6349625002E8A65313B /* appstore.png */,
+				F40034AB980F2DA3A6019FF6 /* appstore.png */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		FD0F2A5924F2DAAF00A7FAB2 /* KerbalKompanionTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +284,7 @@
 				FDF214C8241AE56500606C8B /* LaunchScreen.storyboard */,
 				FDF214CB241AE56500606C8B /* Info.plist */,
 				FDF214C5241AE56500606C8B /* Preview Content */,
+				ADE83FCF00E2A9BAEF6C7D2E /* Resources */,
 			);
 			path = KerbalKompanion;
 			sourceTree = "<group>";

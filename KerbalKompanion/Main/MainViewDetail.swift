@@ -17,7 +17,7 @@ struct MainViewDetail: View {
 
     
     var body: some View {
-        if self.telemachus.isConnected || true {
+        if self.telemachus.isConnected {
             return containedView()
         } else {
             return AnyView(
